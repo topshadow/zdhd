@@ -1,0 +1,11 @@
+<dx-data-grid id="products" [dataSource]="dataSource" [showBorders]="true">
+  <dxo-editing mode="row" [allowAdding]="true" [allowUpdating]="true" [allowDeleting]="true">
+  </dxo-editing>
+  <dxo-remote-operations [filtering]="true" [sorting]="true" [grouping]="true"></dxo-remote-operations>
+  <dxi-column dataField="name" [caption]="'产品名称'"></dxi-column>
+  <dxi-column dataField="price" [caption]="'产品价格'"></dxi-column>
+  <dxi-column dataField="menus" caption="菜单权限" editCellTemplate="editCellTemplate" cellTemplate="cellTemplate">
+  </dxi-column>
+  <dxi-column dataField="createTime" dataType="date" [caption]="'创建时间'"></dxi-column>
+
+</dx-data-grid>
