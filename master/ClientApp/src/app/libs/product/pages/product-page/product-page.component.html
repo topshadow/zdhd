@@ -1,11 +1,75 @@
-<dx-data-grid id="products" [dataSource]="dataSource" [showBorders]="true">
-  <dxo-editing mode="row" [allowAdding]="true" [allowUpdating]="true" [allowDeleting]="true">
+<dx-data-grid id="products" [dataSource]="productDataSource" [showBorders]="true">
+  <dxo-editing mode="popup" [allowAdding]="true" [allowUpdating]="true" [allowDeleting]="true">
+    <dxo-popup title="编辑"
+               [showTitle]="true"
+               [width]="700"
+               [height]="600"
+               [position]="{ my: 'center', at: 'center', of: window }">
+    </dxo-popup>
   </dxo-editing>
   <dxo-remote-operations [filtering]="true" [sorting]="true" [grouping]="true"></dxo-remote-operations>
+  <dxi-column dataField="code" [caption]="'产品代码'"></dxi-column>
+  <dxi-column dataField="productImages" [caption]="'产品组图'" editCellTemplate="editCellTemplate" cellTemplate="cellTemplate"></dxi-column>
   <dxi-column dataField="name" [caption]="'产品名称'"></dxi-column>
-  <dxi-column dataField="price" [caption]="'产品价格'"></dxi-column>
-  <dxi-column dataField="menus" caption="菜单权限" editCellTemplate="editCellTemplate" cellTemplate="cellTemplate">
-  </dxi-column>
-  <dxi-column dataField="createTime" dataType="date" [caption]="'创建时间'"></dxi-column>
+  <dxi-column dataField="subProducts" [caption]="'子产品'" editCellTemplate="subProductEditCellTemplate" cellTemplate="subProductCellTemplate" ></dxi-column>
+  <dxi-column dataField="summary" [caption]="'产品简介'"></dxi-column>
+  <dxi-column dataField="html" [caption]="'内容'"></dxi-column>
+  <dxi-column dataField="status" [caption]="'产品状态'"></dxi-column>
+  <dxi-column dataField="totalViewNum" dataType="number" [caption]="'点击查看数量'"></dxi-column>
+  <dxi-column dataField="createTime" dataType="date" [caption]="'发布日期'"></dxi-column>
+
+<!--产品图片-->
+  <div *dxTemplate="let cellInfo of 'cellTemplate'">
+    <image-lookup [value]="cellInfo.value"></image-lookup>
+  </div>
+  <div *dxTemplate="let cellInfo of 'editCellTemplate'">
+    <image-lookup [(value)]="cellInfo.value" [keyExpr]="'url'" (valueChange)="cellInfo.setValue($event)" [mode]="ModeEnum.Create"></image-lookup>
+  </div>
+
+
+  <!-- 子产品管理 -->
+  <div *dxTemplate="let cellInfo of 'subProductCellTemplate'">
+    <dx-button text="详情" type="success" (click)="subProductsPopVisible=true"></dx-button>
+
+    <dx-popup class="popup" [width]="'100%'" [showTitle]="true" title="查看子产品" [dragEnabled]="false"
+              [closeOnOutsideClick]="true" [(visible)]="subProductsPopVisible">
+      <dx-data-grid id="subProducts" [dataSource]="cellInfo.value" [showBorders]="true">
+        <dxo-editing mode="popup" >
+          <dxo-popup title="编辑"
+                     [showTitle]="true"
+                     [width]="700"
+                     [height]="600"
+                     [position]="{ my: 'center', at: 'center', of: window }">
+          </dxo-popup>
+        </dxo-editing>
+        <dxi-column dataField="cateValue" [caption]="'分类名'"></dxi-column>
+        <dxi-column dataField="price" dataType="number" [caption]="'价格'"></dxi-column>
+        <dxi-column dataField="totalSaleNum" dataType="number" [caption]="'库存数量'"></dxi-column>
+      </dx-data-grid>
+      </dx-popup>
+  </div>
+  <div *dxTemplate="let cellInfo of 'subProductEditCellTemplate'">
+    <dx-button text="管理子产品"  type="success" (onClick)="subProductsEditPopVisible=true" ></dx-button>
+    <dx-popup class="popup" [width]="'100%'" [showTitle]="true" title="管理子产品" [dragEnabled]="false"
+              [closeOnOutsideClick]="true" [(visible)]="subProductsEditPopVisible">
+      <dx-data-grid id="subProducts" [dataSource]="cellInfo.value" [showBorders]="true" >
+        <dxo-editing mode="popup" [allowAdding]="true" [allowUpdating]="true" [allowDeleting]="true">
+          <dxo-popup title="编辑"
+                     [showTitle]="true"
+                     [width]="700"
+                     [height]="600"
+                     [position]="{ my: 'center', at: 'center', of: window }">
+          </dxo-popup>
+        </dxo-editing>
+        <dxi-column dataField="cateValue" [caption]="'分类名'"></dxi-column>
+        <dxi-column dataField="price" dataType="number" [caption]="'价格'"></dxi-column>
+        <dxi-column dataField="totalSaleNum" dataType="number" [caption]="'库存数量'"></dxi-column>
+      </dx-data-grid>
+    </dx-popup>
+  </div>
+
 
 </dx-data-grid>
+
+
+

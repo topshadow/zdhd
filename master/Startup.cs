@@ -29,10 +29,9 @@ namespace Wings {
             services.AddSpaStaticFiles (configuration => {
                 configuration.RootPath = "ClientApp/dist";
             });
-            var connection = @"Server=localhost;Initial Catalog=shop;Integrated Security=True";
             services
-                .AddDbContext<RBACContext> (options => options.UseSqlServer (connection))
-                .AddDbContext<ProductContext>(options => options.UseSqlServer(connection));
+                .AddDbContext<RBACContext> (options => options.UseSqlServer (WebConfig.connectUrl))
+                .AddDbContext<ProductContext>(options => options.UseSqlServer(WebConfig.connectUrl));
             services.AddSwaggerGen (c => {
                 c.SwaggerDoc ("v1", new Info {
                     Version = "v1",

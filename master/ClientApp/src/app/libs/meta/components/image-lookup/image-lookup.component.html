@@ -1,0 +1,8 @@
+<ng-container *ngIf="mode==ModeEnum.Query">
+  <img [src]="image[keyExpr]" alt="Alternate Text" *ngFor="let image of value" style="max-width:50px" />
+</ng-container>
+
+<ng-container *ngIf="mode==ModeEnum.Create||mode== ModeEnum.Edit">
+  <img [src]="image[keyExpr]" alt="Alternate Text" *ngFor="let image of value" style="max-width:50px"/>
+  <dx-button text="新增" icon="add" (click)="addImage()" ></dx-button>
+</ng-container>

@@ -6,7 +6,7 @@ import { SharedModule } from '../../../app/shared/shared.module';
 
 @NgModule({ 
   declarations: [ProductPageComponent],
-  imports: [SharedModule, MetaModule, RouterModule.forChild([
+  imports: [SharedModule.forRoot(), MetaModule, RouterModule.forChild([
     { path: "product", component: ProductPageComponent }
   ])]
 }) 

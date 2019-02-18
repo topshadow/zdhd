@@ -38,19 +38,30 @@
 
   <ItemGroup>
     <!-- Don't publish the SPA source files, but do show them in the project files list -->
+    <Compile Remove="ClientApp\src\app\libs\meta\components\新文件夹\**" />
     <Content Remove="$(SpaRoot)**" />
+    <Content Remove="ClientApp\src\app\libs\meta\components\新文件夹\**" />
     <None Include="$(SpaRoot)**" Exclude="$(SpaRoot)node_modules\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="ClientApp\src\app\libs\meta\components\新文件夹\**" />
+    <None Remove="ClientApp\src\app\libs\meta\components\新文件夹\**" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\libs\product\product.module.ts" />
     <None Remove="ClientApp\src\app\libs\rbac\pages\org-page\org-page.component.ts" />
+    <None Remove="ClientApp\src\app\shared\services\file.service.ts" />
+    <None Remove="ClientApp\src\app\shared\services\upload.service.ts" />
     <None Remove="ClientApp\src\app\shared\shared.module.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\libs\product\product.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\libs\rbac\pages\org-page\org-page.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\services\file.service.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\shared\services\upload.service.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\shared.module.ts" />
   </ItemGroup>
 

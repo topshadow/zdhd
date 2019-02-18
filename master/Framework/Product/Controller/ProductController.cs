@@ -10,10 +10,14 @@ using Newtonsoft.Json;
 using Wings.Framework.Controllers;
 using Wings.Framework.Product.Model;
 using Wings.Framework.RBAC.Model;
+using Microsoft.EntityFrameworkCore;
 
 namespace Wings.Framework.Product.Controllers
 {
-    ///
+
+    /// <summary>
+    /// 
+    /// </summary>
     [Route("api/Product/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
@@ -26,9 +30,12 @@ namespace Wings.Framework.Product.Controllers
         /// </summary>
         /// <param name="loadOptions"></param>    
         [HttpGet]
-        public object productTagQuery(DataSourceLoadOptions loadOptions)
+        public object productQuery(DataSourceLoadOptions loadOptions)
         {
-            var data = DataSourceLoader.Load(this.productContext.ProductTags, loadOptions);
+            var query = (from Product in this.productContext.Products select Product)
+                .Include(p => p.productImages)
+                .Include(p => p.subProducts);
+            var data = DataSourceLoader.Load(  query, loadOptions);
             return data;
         }
 
@@ -40,12 +47,15 @@ namespace Wings.Framework.Product.Controllers
         [HttpPost]
         public bool Post([FromForm] BodyData bodyData)
         {
-            var productTag = new ProductTag();
-            JsonConvert.PopulateObject(bodyData.values, productTag);
+            var product = new Product.Model.Product();
+
+            JsonConvert.PopulateObject(bodyData.values, product);
+
+          
             //Validate(order);
             if (!ModelState.IsValid)
                 return false;
-            this.productContext.ProductTags.Add(productTag);
+            this.productContext.Products.Add(product);
             this.productContext.SaveChanges();
             return true;
         }
@@ -59,8 +69,8 @@ namespace Wings.Framework.Product.Controllers
         public bool Delete(int key)
         {
 
-            var menu = this.productContext.ProductTags.Find(key);
-            this.productContext.ProductTags.Remove(menu);
+            var menu = this.productContext.Products.Find(key);
+            this.productContext.Products.Remove(menu);
             this.productContext.SaveChanges();
             return true;
         }
@@ -73,8 +83,9 @@ namespace Wings.Framework.Product.Controllers
         [HttpPut]
         public bool Put(int key, BodyData bodyData)
         {
-            var productTag = this.productContext.ProductTags.Find(key);
-            JsonConvert.PopulateObject(bodyData.values, productTag);
+            var product = this.productContext.Products.Find(key);
+            
+            JsonConvert.PopulateObject(bodyData.values, product);
             this.productContext.SaveChanges();
             return true;
         }
