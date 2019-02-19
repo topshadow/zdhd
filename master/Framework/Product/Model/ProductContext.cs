@@ -15,6 +15,7 @@ namespace Wings.Framework.Product.Model
     /// <summary>
     /// 角色权限模块
     /// </summary>
+
     public class ProductContext : DbContext
     { /// <summary>
       /// 
@@ -34,48 +35,60 @@ namespace Wings.Framework.Product.Model
         /// 子产品表
         /// </summary>
         public DbSet<SubProduct> SubProducts { get; set; }
-
+        /// <summary>
+        /// 产品标签表
+        /// </summary>
+        public DbSet<ProductTag> ProductTags { get; set; }
+        /// <summary>
+        /// 广告
+        /// </summary>
+        public DbSet<Banner> Banners { get; set; }
         /// <summary>
         /// 
         /// </summary>
         /// <param name="modelBuilder"></param>
-        protected override void OnModelCreating(ModelBuilder modelBuilder) {
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
             // 产品 一对多 产品图片
             modelBuilder.Entity<ProductImage>().HasOne(pImage => pImage.product).WithMany(p => p.productImages);
             // 产品 一对多 子产品
             modelBuilder.Entity<SubProduct>().HasOne(subP => subP.product).WithMany(p => p.subProducts);
+            // 产品组
+            modelBuilder.Entity<Product>().HasOne(p => p.productTag).WithMany(tag => tag.products);
         }
     }
 
     /// <summary>
     /// 组织表
     /// </summary>
-    //[Table("ProductTag")]
-    //public class ProductTag
-    //{
-    //    /// <summary>
-    //    /// 组织Id
-    //    /// </summary>
-    //    [Key]
-    //    [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-    //    public int productTagId { get; set; }
-    //    /// <summary>
-    //    /// 组织名字
-    //    /// </summary>
-    //    public string tagName { get; set; }
-    //    /// <summary>
-    //    /// 标签
-    //    /// </summary>
-    //    public string remark { get; set; }
-    //    /// <summary>
-    //    /// 标签分组
-    //    /// </summary>
-    //    public string cate { get; set; }
-    //    /// <summary>
-    //    /// 创建时间
-    //    /// </summary>
-    //    public Nullable<DateTime> createTime { get; set; }
-    //}
+    [Table("ProductTags")]
+    public class ProductTag
+    {
+        /// <summary>
+        /// 标签id
+        /// </summary>
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int productTagId { get; set; }
+        /// <summary>
+        /// 标签标题
+        /// </summary>
+        public string name { get; set; }
+        /// <summary>
+        /// 备足
+        /// </summary>
+        public string remark { get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public Nullable<DateTime> createTime { get; set; } = new DateTime();
+        /// <summary>
+        /// 产品,用于一对多
+        /// </summary>
+        public List<Product> products { get; set; }
+
+    }
     /// <summary>
     /// 产品表
     /// </summary>
@@ -113,7 +126,6 @@ namespace Wings.Framework.Product.Model
         /// 产品状态
         /// </summary>
         public ProductStatus status { get; set; } = ProductStatus.Submitted;
-
         /// <summary>
         /// 总销量
         /// </summary>
@@ -131,11 +143,23 @@ namespace Wings.Framework.Product.Model
         /// </summary>
         public List<SubProduct> subProducts { get; set; }
 
+        /// <summary>
+        /// 产品标签id
+        /// </summary>
+        public int productTagId { get; set; }
+        /// <summary>
+        /// 产品分类标签
+        /// </summary>
+        [JsonIgnore]
+        [IgnoreDataMember]
+        public ProductTag productTag { get; set; }
+
     }
     /// <summary>
     /// 产品状态
     /// </summary>
-    public enum ProductStatus {
+    public enum ProductStatus
+    {
         /// <summary>
         /// 未提交
         /// </summary>
@@ -152,14 +176,15 @@ namespace Wings.Framework.Product.Model
         /// 过期
         /// </summary>
         Disabled
-        
+
     }
-     
+
     /// <summary>
     /// 产品图片
     /// </summary>
     [Table("ProductImages")]
-    public class ProductImage {
+    public class ProductImage
+    {
         /// <summary>
         /// 产品图片id
         /// </summary>
@@ -184,7 +209,7 @@ namespace Wings.Framework.Product.Model
         [JsonIgnore]
         [IgnoreDataMember]
         public Product product { get; set; }
-       
+
 
     }
 
@@ -200,12 +225,12 @@ namespace Wings.Framework.Product.Model
         /// 子产品id
         /// </summary>
         [Key]
-
-       public int subProductId { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int subProductId { get; set; }
         /// <summary>
         ///  分类的值
         /// </summary>
-       public string cateValue { get; set; }
+        public string cateValue { get; set; }
         /// <summary>
         /// 用于关联一对多,多对一
         /// </summary>
@@ -220,16 +245,45 @@ namespace Wings.Framework.Product.Model
         /// 子产品价格
         /// </summary>
         public decimal price { get; set; }
-        
+
         /// <summary>
         /// 库存数量
         /// </summary>
-        public int storageNum { get; set; }
+        public int storageNum { get; set; } = 0;
         /// <summary>
         /// 创建时间
         /// </summary>
-        public Nullable<DateTime> createTime= new DateTime();
-       
+        public Nullable<DateTime> createTime { get; set; } = new DateTime();
+
+
+    }
+
+    /// <summary>
+    /// 广告
+    /// </summary>
+    [Table("Banner")]
+    public class Banner
+    {
+        /// <summary>
+        /// 广告Id
+        /// </summary>
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int bannerId { get; set; }
+        /// <summary>
+        /// 图片地址
+        /// </summary>
+        public string imageUrl { get; set; }
+
+        /// <summary>
+        /// 产品id
+        /// </summary>
+        public int productId { get; set; }
+
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        public Nullable<DateTime> createTime { get; set; } = DateTime.Now;
 
     }
 

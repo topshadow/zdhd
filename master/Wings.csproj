@@ -50,6 +50,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\libs\product\pages\banner-page\banner-page.component.ts" />
     <None Remove="ClientApp\src\app\libs\product\product.module.ts" />
     <None Remove="ClientApp\src\app\libs\rbac\pages\org-page\org-page.component.ts" />
     <None Remove="ClientApp\src\app\shared\services\file.service.ts" />
@@ -58,6 +59,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\libs\product\pages\banner-page\banner-page.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\libs\product\product.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\libs\rbac\pages\org-page\org-page.component.ts" />
     <TypeScriptCompile Include="ClientApp\src\app\shared\services\file.service.ts" />

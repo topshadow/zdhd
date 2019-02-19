@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>物流详情</title>
+<meta name="viewport" content="initial-scale=1">
+<meta name="format-detection" content="telephone=no" />
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/shipping.css">
+<link rel="stylesheet" type="text/css" href="font/iconfont.css">
+<link rel="stylesheet" href="css/flow.css">
+</head>
+<body>
+
+	<div class="tab_nav">
+		<div class="header" style=" position:relative">
+			<div class="h-left"> <a class="sb-back" href="javascript:history.back(-1)" title="返回"></a>  </div>
+			<div class="h-mid"> 物流详情 </div>
+		</div>
+	</div>
+
+<div id="shipping">
+  <div class="swiper-container" id="rotate-swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide rotate-slide">
+        <div class="block">
+          <div class="headerr">
+            <h3 class="timer">
+                预计到达1月2日
+                <p>10:20<span>am</span></p>
+            </h3>
+            <h4 class="distance">
+                距离
+                <p>3.0<span>km</span></p>
+            </h4>
+            <div class="clear"></div>
+            <div class="top-info clearfix"><div class="img"><img src="images/big_wine.png"></div>
+              <div class="txt">
+                <h6>百年大福6年·酱香型白500ML*6 </h6>
+                <p>×1</p>
+                <p>韵达快递:123456456466</p>
+              </div>
+             
+            </div>
+          </div>
+          <div class="body"><div class="swiper-container"><div class="swiper-wrapper"><div class="swiper-slide"></div></div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination" id="rotate-pagination"></div>
+  </div>
+  <div class="close-btn"><i class="icon-cuowuguanbiquxiao"></i></div>
+</div>
+
+<script src="js/swiperr.min.js"></script> 
+<script>
+    var swiper = new Swiper('#rotate-swiper', {
+    	pagination: {
+    		el: '#rotate-pagination',
+    	},
+    	runCallbacksOnInit: true,
+    	watchSlidesProgress: true,
+    	on: {
+    		progress: function() {
+    			for (var i = 1; i < this.slides.length; i++) {
+    				if (this.slides[i].progress <= 0) {
+    					this.slides.eq(i).find(".block").transition(0)
+    					this.slides.eq(i).find(".block").transform("rotateZ(" + 13 * Math.abs(this.slides[i].progress) + "deg) translate3d(0, 0, 0)")
+    				}
+    			}
+    		},
+    		setTransition: function(transition) {
+    			for (var i = 1; i < this.slides.length; i++) {
+    				if (this.slides[i].progress <= 0) {
+    					this.slides.eq(i).find(".block").transition(transition)
+    					rot = 13 * Math.abs(this.slides[i].progress);
+    					this.slides.eq(i).find(".block").transform("rotateZ(" + rot + "deg) translate3d(0, 0, 0)")
+    				}
+    			}
+    		},
+    		init: function() {
+    			this.emit('transitionEnd');
+    		},
+    		transitionEnd: function() {
+    			if (this.slides[this.activeIndex].contentLoaded == undefined) {
+    				this.slides.eq(this.activeIndex).find('.swiper-slide').html('<ul><li class="big-icon"><div>9:02<span>1月20日</span></div><div><i class="iconfont icon-yunshuzhongwuliu"></i></div><div>签收</div></li><li><div>9:02<span>1月20日</span></div><div><i></i></div><div>您的订单开始处理</div></li><li><div>9:02<span>1月20日</span></div><div><i></i></div><div>您的订单开始处理</div></li><li class=""><div>9:02<span>1月20日</span></div><div><i class=""></i></div><div>[金华市]金华江北小宋[154566556]  已揽收</div></li><li><div>9:02<span>1月20日</span></div><div><i></i></div><div>您的包裹已出库</div></li><li><div>9:02<span>1月20日</span></div><div><i></i></div><div>您的包裹已出库</div></li><li><div>9:02<span>1月20日</span></div><div><i></i></div><div>您的包裹已出库</div></li><li class=""><div>9:02<span>1月20日</span></div><div><i class=""></i></div><div>您的包裹已出库</div></li><li><div>9:02<span>1月20日</span></div><div><i></i></div><div>您的包裹已打包</div></li><li><div>9:02<span>1月20日</span></div><div><i></i></div><div>您的包裹已出库</div></li><li><div>9:02<span>1月20日</span></div><div><i></i></div><div>您的包裹已出库</div></li><li class=""><div>9:02<span>1月20日</span></div><div></div><div>您的订单已发货</div></li></ul>');
+    				new Swiper(this.slides.eq(this.activeIndex).find('.swiper-container'), {
+    					direction: 'vertical',
+    					slidesPerView: 'auto',
+    					freeMode: true,
+    				});
+    				this.slides[this.activeIndex].contentLoaded = true;
+    			}
+
+    		},
+    	},
+    });
+	document.querySelector(".close-btn").onclick=function(){
+		document.querySelector("#shipping").style.display='none';
+		}
+	
+		
+</script>
+</body>
+</html>

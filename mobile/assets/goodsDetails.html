@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="Generator" content="ECSHOP v2.7.3">
+		
+		<meta name="viewport" content="width=device-width">
+		<title>商品详情</title>
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+		<link rel="stylesheet" type="text/css" href="css/public.css">
+		<link rel="stylesheet" type="text/css" href="css/viewer.css">
+		<link rel="stylesheet" type="text/css" href="css/goods.css">
+		<script src="js/hm.js.下载"></script>
+		<script type="text/javascript" src="js/jquery.js.下载"></script>
+		
+		<script type="text/javascript" src="js/transport.js.下载"></script>
+		<script type="text/javascript" src="js/utils.js.下载"></script>
+		<script type="text/javascript" src="js/touchslider.dev.js.下载"></script>
+		<script type="text/javascript" src="js/viewer.js.下载"></script>
+		<script type="text/javascript" src="js/common.js.下载"></script>  
+		<script type="text/javascript" src="js/gouwu.js"></script>  
+		<script src="js/html2canvas.min.js"></script>
+		<script src="js/canvas2image.js"></script>
+		<script src="js/base64.js"></script>
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/haibao.js"></script>
+		
+</head>
+<body style="cursor: auto;" class="" id="content">
+
+		<script language="javascript"> 
+		/*屏蔽所有的js错误*/
+		function killerrors() { 
+		return true; 
+		} 
+		window.onerror = killerrors; 
+		//-->
+		function tiaozhuan()
+		{ 
+		//var thisurl = window.location.href;
+		document.getElementById("share_form").submit();
+		}
+		</script> 
+		<script type="text/javascript">
+						/*第一种形式 第二种形式 更换显示样式*/
+						function setGoodsTab(name,cursel,n){
+							//$('html,body').animate({'scrollTop':0},600);
+						for(i=1;i<=n;i++){
+						var menu=document.getElementById(name+i);
+						var con=document.getElementById("user_"+name+"_"+i);
+						menu.className=i==cursel?"on":"";
+						//con.style.display=i==cursel?"block":"none";
+						}
+						}
+						$(function(){
+							$("#block_div").on("click",function(e){
+								$("#block_div").removeClass("show_block");
+								$("body").removeClass("body_block")
+							});
+						});
+						function share_shop_goods()
+						{
+							$("#block_div").addClass("show_block");
+							$("body").addClass("body_block")
+						}
+						</script>
+		<div class="goods_header">
+		  <h2><a class="sb-back" href="http://www.9taotao.com/mobile/goods.php?id=482" title="返回"></a></h2>
+		  <ul>
+			<li><a href="" class="on" id="goods_ka1" onclick="setGoodsTab(&#39;goods_ka&#39;,1,3)">商品</a></li>
+			<!-- <li><a href="" class="" id="goods_ka2" onclick="setGoodsTab(&#39;goods_ka&#39;,2,3)">详情</a></li> -->
+		  </ul>
+		  <dl>
+			<dd class="top_bar">
+			  <div onclick="show_menu();$(&#39;#close_btn&#39;).addClass(&#39;hid&#39;);" id="show_more"><a href="javascript:;"></a></div>
+			</dd>
+			<dt> <a href="shopcarko.html" class="show_cart"><em class="global-nav__nav-shop-cart-num" id="ECS_CARTINFO"> 0 </em></a></dt>
+		  </dl>
+		</div>
+		<script type="text/javascript" src="js/mobile.js.下载"></script>
+		
+		<div class="main body_bj" id="user_goods_ka_1" style="display:block;">
+		 
+		<div class="banner">
+			  <div id="slider" class="slider" style="overflow: hidden; visibility: visible; list-style: none; position: relative;">
+			<ul id="sliderlist" class="sliderlist" style="position: relative; overflow: hidden; transition: left 600ms ease; width: 2625px; left: -1500px;">
+					 <li style="float: left; display: block; width: 375px;"><img title="" width="100%" src="images/482_P_1544168761095.jpg"></li>
+					 <li style="float: left; display: block; width: 375px;"><img title="" width="100%" src="images/482_P_1544168760675.jpg"></li>
+					 <li style="float: left; display: block; width: 375px;"><img title="" width="100%" src="images/482_P_1544168760669.jpg"></li>
+					 <li style="float: left; display: block; width: 375px;"><img title="" width="100%" src="images/482_P_1544168760195.jpg"></li>
+					 <li style="float: left; display: block; width: 375px;"><img title="" width="100%" src="images/482_P_1544168760579.jpg"></li>
+					 <li style="float: left; display: block; width: 375px;"><img title="" width="100%" src="images/482_P_1544168760173.jpg"></li>
+					 <li style="float: left; display: block; width: 375px;"><img title="" width="100%" src="images/482_P_1544175272446.jpg"></li>
+				   </ul>
+			<div id="pagenavi">
+				<a href="javascript:void(0);" class="active"></a>
+				 <a href="javascript:void(0);" class=""></a>
+				 <a href="javascript:void(0);" class=""></a>
+				 <a href="javascript:void(0);" class=""></a>
+				 <a href="javascript:void(0);" class=""></a>
+				 <a href="javascript:void(0);" class=""></a>
+				 <a href="javascript:void(0);" class=""></a>
+			 </div>
+		  </div>
+		</div>
+		<div class="s_bottom"></div>
+		<script>
+			$(function(){
+				$("div.module_special .wrap .major ul.list li:last-child").addClass("remove_bottom_line");
+			});
+			var active=0,
+				as=document.getElementById('pagenavi').getElementsByTagName('a');
+				
+			for(var i=0;i<as.length;i++){
+				(function(){
+					var j=i;
+					as[i].onclick=function(){
+						t2.slide(j);
+						return false;
+					}
+				})();
+			}
+			var t2=new TouchSlider({id:'sliderlist', speed:600, timeout:6000, before:function(index){
+					as[active].className='';
+					active=index;
+					as[active].className='active';
+				}});
+				$("#sliderlist").viewer(
+				{
+					toolbar:false,
+					title:false,
+					url:"data-original",
+					//movable:false,
+				}
+				);
+		</script>
+		<div class="product_info"> 
+		  
+		  <div class="info_dottm"> 
+			  <h3><em>8年酒槽封坛酒.酱香型白酒500ML*6（整箱装）</em></h3>
+			
+			<!--
+			<div class="right"><a onClick="tiaozhuan()">
+			  <div id="pro_share" class="share"></div>
+			  </a></div>
+			  -->
+		  </div>
+		  
+		  <dl class="goods_price">
+				<dt> <span id="ECS_GOODS_AMOUNT">￥980.00</span>
+			   
+			</dt>
+				<div class="right">
+					<a onclick="choose_attrone(0)">
+						<div id="pro_share" class="share"></div>
+					</a>
+					<h4>六折优惠</h4>
+				</div> 
+			<dd style="margin-top:-10px;">
+			<i>原价：<font>2380.00元</font>&nbsp;&nbsp;</i>
+			  </dl>  
+		  <ul class="price_dottm">
+			<li style="text-align:left;color:#757575;">快递：0.00</li>
+			<li style="text-align:left;color:#757575;">月销2988笔</li>
+			<li style="text-align:left;color:#757575;">湖北武汉</li>
+		  </ul>
+		  <p style=" width:100%; height:12px;background:#f4f8fc;"></p>
+		  <ul class="price_dottm">
+			<li style="text-align:left;color:#757575;">规格：500ML</li>
+		  </ul>
+		  <p style=" width:100%; height:12px;background:#f4f8fc;"></p>
+		</div>
+		 <!--  <div class="goods_hd"> 
+		  <dl>
+			<dt onclick="choose_attrtwo(0)"> 
+			 <i>惠</i><span>购买此商品赠送： 165积分</span> 
+			   </dt>
+		  </dl>
+		  </div>  -->  
+			
+		
+		<div style="margin-bottom:5px;"></div>
+		</div>
+					  
+		<script type="text/javascript">
+		var goods_id = 482;
+		var goodsattr_style = 1;
+		var gmt_end_time = 0;
+		var day = "天";
+		var hour = "小时";
+		var minute = "分钟";
+		var second = "秒";
+		var end = "结束";
+		var goodsId = 482;
+		var now_time = 1546844655;
+		/**
+		 * 点选可选属性或改变数量时修改商品价格的函数
+		 */
+		function changePrice()
+		{
+		  var attr = getSelectedAttributes(document.forms['ECS_FORMBUY']);
+		  var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+		if(qty <=0 ){
+		 document.forms['ECS_FORMBUY'].elements['number'].value = 1;
+		 qty = 1;
+		}
+		  Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty, changePriceResponse, 'GET', 'JSON');
+		}
+		/**
+		 * 接收返回的信息
+		 */
+		function changePriceResponse(res)
+		{
+		  if (res.err_msg.length > 0)
+		  {
+			alert(res.err_msg);
+		  }
+		  else
+		  {
+				document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+				/**进入进入H5，进入任商品详情页点击“加入购物车”，将数量变成2然后提交。查看该商品单价 by liuhengdong
+				if (document.getElementById('ECS_GOODS_AMOUNT')){
+				  document.getElementById('ECS_GOODS_AMOUNT').innerHTML = res.result;
+				}
+				 **/
+			   if(document.getElementById('ECS_GOODS_NUMBER')){
+				document.getElementById('ECS_GOODS_NUMBER').innerHTML = res.goods_attr_number;
+					if(res.goods_attr_number > 0){
+						document.getElementById('ECS_ADD_TO_CART').style.display="block";
+						document.getElementById('ECS_ONE_STEP_BUY').style.display="block";
+						document.getElementById('ECS_DAOHUO').style.display="none";
+					}else{
+						document.getElementById('ECS_ADD_TO_CART').style.display="none";
+						document.getElementById('ECS_ONE_STEP_BUY').style.display="none";
+						document.getElementById('ECS_DAOHUO').style.display="block";
+					}
+				}
+				if(document.getElementById('ECS_GOODS_AMOUNT_JF')){
+				  document.getElementById('ECS_GOODS_AMOUNT_JF').innerHTML = res.result_jf;
+				}
+				if(document.getElementById('ECS_GOODS_AMOUNT_CHOOSE')){
+						document.getElementById('ECS_GOODS_AMOUNT_CHOOSE').innerHTML = res.result;
+				}
+				if(document.getElementById('ECS_GOODS_ATTR_THUMB')){
+					document.getElementById('ECS_GOODS_ATTR_THUMB').src = res.goods_attr_thumb;
+				}
+				if(document.getElementById('ECS_GOODS_ATTR')){
+					document.getElementById('ECS_GOODS_ATTR').innerHTML = res.goods_attr;
+				}
+			if(document.getElementById('ECS_SELECT_GOODS_ATTR') && res.goods_attr != ''){
+					document.getElementById('ECS_SELECT_GOODS_ATTR').style.display="block";
+					document.getElementById('ECS_SELECT_GOODS_ATTR').innerHTML ="<dt onClick='choose_attr(0)'><span>产品属性：" + res.goods_attr + "</span></dt>";
+			}
+				if(document.getElementById('IS_EXCLUSIVE') && res.is_exclusive){
+					document.getElementById('IS_EXCLUSIVE').style.display = 'block';
+				}else{
+					document.getElementById('IS_EXCLUSIVE').style.display = 'none';
+				}
+			}
+		}
+		</script>
+		<section class="f_mask2" style="display: none;"></section>
+		<section class="f_block2" id="choose_attr2" style="height:0; overflow:hidden;">
+		  
+		<div class="Promotions"> 
+		 <h2>优惠活动</h2>  
+		   <ul>
+			
+			 
+		 </ul>
+		</div> 
+		 <div class="goods_shut">     
+			<a href="javascript:void(0)" onclick="close_choose_attr2();" class="shut" style=" color:#FFF; font-size:18px;">关闭</a>
+		</div>
+		</section>
+		<script>
+		function choose_attrtwo(num){
+			$("#choose_attr2").animate({height:'80%'},[10000]);
+				var total=0,h=$(window).height(),
+				top =$('.Promotions h2').height()||0,
+				con = $('.Promotions');
+				total = 0.8*h;
+				con.height(total-top+'px');
+			$(".f_mask2").show();
+		}
+		function close_choose_attr2(){	
+			$(".f_mask2").hide();
+			$('#choose_attr2').animate({height:'0'},[10000]);
+		}
+		function changeAtt(t) {
+		t.lastChild.checked='checked';
+		for (var i = 0; i<t.parentNode.childNodes.length;i++) {
+				if (t.parentNode.childNodes[i].className == 'hover') {
+					t.parentNode.childNodes[i].className = '';
+					t.childNodes[0].checked="checked";
+				}
+			}
+		t.className = "hover";
+		changePrice();
+		}
+		function changeAtt1(t) {
+		t.lastChild.checked='checked';
+		for (var i = 0; i<t.parentNode.childNodes.length;i++) {
+				if (t.className == 'hover') {
+					t.className = '';
+					t.childNodes[0].checked = false;
+				}
+				else{
+					t.className="hover";
+					t.childNodes[0].checked = true;
+				}
+				
+			
+		}
+		changePrice();
+		}
+		</script>
+		<section class="f_mask3" style="display: none;"></section>
+		<section class="f_block3" id="choose_attr3" style="height:0; overflow:hidden;">
+		<div class="subNavBox"> 
+			<h2>会员专享价</h2>
+				</div>
+		 <div class="goods_shut">
+		<a href="javascript:void(0)" onclick="close_choose_attr3();" class="shut" style=" color:#FFF;font-size:18px;">关闭</a>
+		</div>
+		</section>
+		<script>
+		function choose_attrstr(num){
+			$("#choose_attr3").animate({height:'80%'},[10000]);
+				var total=0,h=$(window).height(),
+				top =$('.subNavBox').height()||0,
+				con = $('.subNavBox ul');
+				total = 0.8*h;
+				con.height(total-top+'px');
+			$(".f_mask3").show();
+		}
+		function close_choose_attr3(){	
+			$(".f_mask3").hide();
+			$('#choose_attr3').animate({height:'0'},[10000]);
+		}
+		</script>
+		<section class="f_mask1" style="display: none;"></section>
+		<section class="f_block1" id="choose_attr1" style="height:0; overflow:hidden;">
+		
+		
+		
+			<section class="good_canshu">  
+				<ul>
+					<li id="btnshare" onclick="choose_attrone(0)">生成海报</li>
+					<li>分享给好友</li>  
+				</ul>
+			</section>
+		
+		
+		   
+			
+		
+			<div class="goods_shut">
+			<a href="javascript:void(0)" onclick="close_choose_attr1();" class="shut" style=" color:#FFF;font-size:18px;">关闭</a>
+			</div>
+		</section>
+	<div id="posters">
+		<!-- <div id="images"></div> -->
+		<a id="closeBut"><img src="images/cloce.png" alt=""></a>
+		<div class="posters_img" id="posters_img">
+			<img src="images/404_thumb_G_1544174830509.jpg" alt="">
+			<h3>8年酒槽封坛酒.酱香型白酒500ML*6（整箱装）</h3>
+			<p>
+				<mainn>
+					<section> 
+						<img id="qrious">
+					</section>
+				</mainn>
+				<script src="./dist/umd/qrious.js"></script> 
+				<script>
+					(function() {
+						var $background = document.querySelector('mainn form [name="background"]')
+						var $foreground = document.querySelector('mainn form [name="foreground"]')
+						var $level = document.querySelector('mainn form [name="level"]')
+						var $section = document.querySelector('mainn section')
+						var $size = document.querySelector('mainn form [name="size"]')
+						var $value = document.querySelector('mainn form [name="value"]')
+						var url = window.location.href;
+						//console.log(test);	
+						var qr = window.qr = new QRious({
+						element: document.getElementById('qrious'),
+						size: 100,
+						value: 'url'
+						})
+					
+						$background.addEventListener('change', function() {
+						qr.background = $background.value || null
+						})
+				
+						$foreground.addEventListener('change', function() {
+						qr.foreground = $foreground.value || null
+							})
+					
+							$level.addEventListener('change', function() {
+							qr.level = $level.value
+							})
+					
+							$size.addEventListener('change', function() {
+							if (!$size.validity.valid) {
+								return
+							}
+					
+							qr.size = $size.value || null
+					
+							$section.style.minWidth = qr.size + 'px'
+							})
+					
+							$value.addEventListener('input', function() {
+							qr.value = $value.value
+							})
+						})()
+				</script>
+		
+			</p>   
+			<div id="btnSave">生成</div>
+			<div id="images"></div>
+			<div class="save_img" id="Download" style="display:none;">保存图片</div>
+			<script>
+				/*生成canvas图形*/
+				
+				// 获取按钮id
+				var btnSave = document.getElementById("btnSave");
+				// 获取内容id
+				var content = document.getElementById("posters_img");
+				// 进行canvas生成
+				btnSave.onclick = function(){
+					html2canvas(content, {
+						onrendered: function(canvas) {
+							//添加属性
+							canvas.setAttribute('id','thecanvas');
+							//读取属性值
+							// var value= canvas.getAttribute('id');
+							document.getElementById('images').innerHTML = '';
+							document.getElementById('images').appendChild(canvas);
+						}
+					});
+				}
+			</script>
+			<script>
+				/*
+				* 说明
+				* 不支持跨域图片
+				* 不能在浏览器插件中使用
+				* 部分浏览器上不支持SVG图片
+				* 不支持Flash
+				*/
+				var Download = document.getElementById("Download");
+				Download.onclick = function(){
+					var oCanvas = document.getElementById("thecanvas");
+				
+					/*自动保存为png*/
+					// 获取图片资源
+					var img_data1 = Canvas2Image.saveAsPNG(oCanvas, true).getAttribute('src');
+					saveFile(img_data1, 'richer.png');
+				
+				
+					/*下面的为原生的保存，不带格式名*/
+					// 这将会提示用户保存PNG图片
+					// Canvas2Image.saveAsPNG(oCanvas);
+				}
+				// 保存文件函数
+				var saveFile = function(data, filename){
+					var save_link = document.createElementNS('http://www.w3.org/1999/xhtml', 'a');
+					save_link.href = data;
+					save_link.download = filename;
+				
+					var event = document.createEvent('MouseEvents');
+					event.initMouseEvent('click', true, false, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+					save_link.dispatchEvent(event);
+				};
+			</script>
+    	</div>
+	</div>
+	<script>
+		$(function(){
+			$("#btnSave").click(function(){
+			//	$("#Download").css("display","block");
+				$("#Download").show();
+			})
+		})
+	</script>
+
+
+<script>
+	function choose_attrone(num){
+		$("#choose_attr1").animate({height:'22%'},[10000]);
+			var total=0,h=$(window).height(),
+			top =$('.good_canshu').height()||0,
+			con = $('.xiangq');
+			total = 0.8*h;
+			con.height(total-top+'px');
+		$(".f_mask1").show();
+	}
+	function close_choose_attr1(){	
+		$(".f_mask1").hide();
+		$('#choose_attr1').animate({height:'0'},[10000]);
+	}
+</script>
+<section class="f_mask" style="display: none;"></section>
+
+<section class="f_block" id="choose_attr" style="height:0; overflow:hidden;">
+<div class="f_title_attr">
+<img id="ECS_GOODS_ATTR_THUMB" src="images/482_thumb_G_1544175272454.jpg" style=" float:left;">
+<div class="f_title_arr_r">
+    <span>【六折购】8年酒槽封坛酒.酱香型白酒500ML*6</span>
+<span>价格：<i id="ECS_GOODS_AMOUNT_CHOOSE" style="color:#421a8e;font-size: 16px;">￥980.00</i></span>
+
+</div>
+<a class="c_close_attr" href="javascript:void(0)" onclick="close_choose_attr();"><img src="images/cloce.png" alt=""></a>
+<div style="height:0px; line-height:0px; clear:both;"></div>
+</div>
+<div class="f_content_attr">
+    <span>规格：</span>
+    <div class="guige">
+        <li class="tabLi selectLi">500ML</li>
+        <li class="tabLi">200ML</li>  
+    </div>
+    <ul class="navContent" style="display:block;"> 
+    
+        <li style=" border-bottom:1px solid #eeeeee">
+                <div class="title1">购买数量</div>
+                <div class="van-sku__stock">
+                    剩余30件
+                </div>
+                <div class="item1">
+                <script language="javascript" type="text/javascript">  function goods_cut(){var num_val=document.getElementById('number');  var new_num=num_val.value;  var Num = parseInt(new_num);  if(Num>1)Num=Num-1;  num_val.value=Num;}  function goods_add(){var num_val=document.getElementById('number');  var new_num=num_val.value;  var Num = parseInt(new_num);  Num=Num+1;  num_val.value=Num;} </script>
+                <span class="ui-number">
+                    <button type="button" class="decrease" onclick="goods_cut();changePrice();"></button>
+                    <input type="number" class="num" id="number" onblur="changePrice();" name="number" value="1" min="1" style=" text-align:center">
+                    <button type="button" class="increase" onclick="goods_add();changePrice();"></button>
+                </span>
+                    </div>
+            
+            </li>        
+    </ul>
+</div>
+<div class="f_foot">
+    <a href=""><input type="submit" border="0" class="add_gift_attr" value="确认"></a>
+<div style=" height:30px"></div>
+</div>
+</section>
+
+<script>
+function choose_attr(num){
+	document.body.style.overflow='hidden';
+	$("#choose_attr").animate({height:'80%'},[10000]);
+		var total=0,h=$(window).height(),
+        top =$('.f_title_attr').height()||0,
+		bottom =$('#choose_attr .f_foot').height()||0,
+        con = $('.f_content_attr');
+		total = 0.8*h;
+		con.height(total-top-bottom+'px');
+	$(".f_mask").show();
+        if(num == 0){
+            var actionForm = document.getElementById('purchase_form');  
+            actionForm.action = "javascript:addToCart(482),close_choose_attr()";
+        }
+        if(num == 1){
+            var actionForm = document.getElementById('purchase_form');  
+            actionForm.action = "javascript:addToCart(482,0,1),close_choose_attr()";
+        }
+}
+function close_choose_attr(){	
+document.body.style.overflow='';
+	$(".f_mask").hide();	
+	$('#choose_attr').animate({height:'0'},[10000]);
+}
+</script>
+<section class="f_mask6" style="display: none;"></section>
+<section class="f_block6" id="choose_attr6" style="height:0; overflow:hidden;">
+<section class="callme">
+<h2>到货通知</h2>  
+<div id="tell_me_form" style="display: none; left: -62.5px; top: 183.5px;">
+  <div class="tell_me_con">
+<div style="background:#FFFDEE ;border:1px dotted #ff3300;line-height:20px; font-weight:normal; padding:10px; margin-top:10px;">
+            <p style="font-size:16px;color:#F52648;">一棵树 兰伯特利城堡红葡萄酒2012 波...</p>
+           <p style="font-size:12px;color:#999;"> 当商品进行补货时，我们将以短信、邮件的形式通知您，最多发送一次，不会对您造成干扰。</p>
+ </div>
+ <ul>
+ <li><span><font color="#ff3300">*</font>数量：</span><em><input type="text" value="1" id="book_number"></em></li>
+ <li><span><font color="#ff3300">*</font>手机号码：</span><em><input type="text" value="" id="phone_num"></em></li>
+ <li><span><font color="#ff3300">*</font>电子邮箱：</span><em><input type="text" value="" id="arrival_email"></em></li>
+ <li><input type="button" value="提交" onclick="tell_me1(482)" class="tell_btn"></li>
+ </ul>
+  </div>
+</div>
+<script>
+                $(function(){
+					$('#tell_me_form').css('left',($(window).width()-500)/2);
+					$('#tell_me_form').css('top',($(window).height()-300)/2);
+					$('.tell_me_close').click(function(){
+						$('#tell_me_form').hide();	
+					//	document.getElementById('bg').style.display='none';
+					})
+				});
+					$(window).scroll(function(){
+                        var ScrollBottom = $(this).height()+$(this).scrollTop();
+					    if(ScrollBottom>=$("#user_goods_ka_2").offset().top && ScrollBottom<$("#user_goods_ka_3").offset().top)
+					    {
+					        $("#goods_ka2").addClass("on");
+					        $("#goods_ka1").removeClass("on");
+					        $("#goods_ka3").removeClass("on");
+					    }
+					    else if(ScrollBottom>=$("#user_goods_ka_3").offset().top)
+					    {
+					        $("#goods_ka3").addClass("on");
+					        $("#goods_ka1").removeClass("on");
+					        $("#goods_ka2").removeClass("on");
+					    }
+					    else{
+					        $("#goods_ka1").addClass("on");
+					        $("#goods_ka2").removeClass("on");
+					        $("#goods_ka3").removeClass("on");
+					    }
+					});
+                </script> 
+<script type="text/javascript">
+   function tell_me(goods_id){
+	
+            //no_have = (typeof(no_have_val) == "undefined" ? 0 : no_have_val);
+            Ajax.call('user.php?act=book_goods', 'id=' + goods_id, tellmeResponse, 'GET', 'JSON');
+    }
+				
+    function tellmeResponse(result){
+        if(result.error==1){
+            document.getElementById('tell_me_form').style.display = 'block';
+            // document.getElementById('bg').style.display='block';
+            document.getElementById('phone_num').value=result.tel;
+            document.getElementById('arrival_email').value=result.email;
+            choose_attr6(0);
+        }
+	if(result.error==0){
+            alert(result.message);
+        }
+	if(result.error==2){
+            alert(result.message);
+            close_choose_attr6();
+            document.getElementById('tell_me_form').style.display = document.getElementById('tell_me_form').style.display=='none'?'block':'none';
+            //  document.getElementById('bg').style.display='none';
+	}
+				 
+    }
+    function tell_me1(goods_id){
+	var num=document.getElementById('book_number').value;
+	var tel=document.getElementById('phone_num').value;
+	var email=document.getElementById('arrival_email').value;
+	var msg = '';
+	var g = /^[1-9]*[1-9][0-9]*$/;
+				
+     if (num == '') {
+        msg += '数量不能为空!\n';
+    }else if(!g.test(num)){
+		msg += '数量需为正整数！\n';
+	}
+    if (tel == '') {
+        msg += '手机号码不能为空！\n';
+    } 
+    if (email == '') {
+        msg += '邮箱不能为空!\n';
+    }
+    if (msg)
+    {
+        alert(msg);
+        return false;
+    }
+    else
+    {		
+        	//no_have = (typeof(no_have_val) == "undefined" ? 0 : no_have_val)
+				Ajax.call('user.php?act=add_book_goods', 'id=' + goods_id + '&num=' + num+ '&tel=' + tel+ '&em=' + email, tellmeResponse, 'GET', 'JSON');
+    }
+			
+				
+				}
+    </script>  
+<div id="tell_me_form" style="display:none;">
+  <div class="tell_me_con">
+<div style="background:#FFFDEE ;border:1px dotted #ff3300;line-height:20px; font-weight:normal; padding:10px; margin-top:10px;">
+            <p style="font-size:16px;color:#F52648;">一棵树 兰伯特利城堡红葡萄酒2012 波...</p>
+           <p style="font-size:12px;color:#999;"> 当商品进行补货时，我们将以短信、邮件的形式通知您，最多发送一次，不会对您造成干扰。</p>
+ </div>
+ <ul>
+ <li><span><font color="#ff3300">*</font>数量：</span><em><input type="text" value="1" id="book_number"></em></li>
+ <li><span><font color="#ff3300">*</font>手机号码：</span><em><input type="text" value="" id="phone_num"></em></li>
+ <li><span><font color="#ff3300">*</font>电子邮箱：</span><em><input type="text" value="" id="arrival_email"></em></li>
+ <li><input type="button" value="提交" onclick="tell_me1(482)" class="tell_btn"></li>
+ </ul>
+  </div>
+</div></section>
+<div class="goods_shut">
+<a href="javascript:void(0)" onclick="close_choose_attr6();" class="shut" style=" color:#FFF;font-size:18px;">关闭</a>
+</div>
+</section>
+<script>
+function choose_attr6(num){
+	$("#choose_attr6").animate({height:'80%'},[10000]);
+		var total=0,h=$(window).height(),
+        top =$('.callme').height()||0,
+        con = $('.tell_me_con');
+		total = 0.8*h;
+		con.height(total-top+'px');
+	$(".f_mask6").show();
+}
+function close_choose_attr6(){	
+	$(".f_mask6").hide();
+	$('#choose_attr6').animate({height:'0'},[10000]);
+}
+function guanzhu(sid){
+	Ajax.call('supplier.php', 'go=other&act=add_guanzhu&suppId=' + sid, selcartResponse, 'GET', 'JSON');
+}
+function selcartResponse(result){
+	
+	alert(result.info);
+}
+</script>
+</form>  
+<!--<div style=" height:55px;"></div>-->
+<div class="footer_nav">
+ <ul> 
+    <li class="bian"><a href=" "><img src="images/shopCart.png" alt=""></a> </li>
+    <li class="bian"><a href=" "><img src="images/service.png" alt=""></a> </li>
+ </ul>
+ <dl> 
+ <dd class="flow" id="ECS_ADD_TO_CART"><a class="button active_button" onclick="choose_attr(0)">加入购物车</a> </dd>
+ <dd class="goumai" id="ECS_ONE_STEP_BUY"><a style="display:block;" onclick="choose_attr(1)">立即购买</a> </dd>
+ <span class="daohuo" id="ECS_DAOHUO"> <a onclick="tell_me(482)">到货通知</a></span>
+ </dl>                
+</div> 
+<script type="text/javascript">
+changePrice();
+  try {onload_leftTime(now_time);}
+  catch (e) {
+}
+</script>
+
+
+<div class="main" id="user_goods_ka_2" style="">
+      <div class="product_main">
+          <div class="product_images product_desc"><p><img src="images/1483084595371747.jpg" style="float:none;" title=" "></p><p>
+              
+              <p><img src="images/1483084597944535.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084597853773.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483427529879233.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084599964427.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084601354347.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084604813110.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084605989051.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084608222765.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084609447676.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084612254241.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084615623858.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084619318469.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084621508107.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084623933442.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084624556032.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084624712476.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084625573098.jpg" style="float:none;" title=" "></p>
+              <p><img src="images/1483084626311436.jpg" style="float:none;" title=" "></p>
+            </div>
+        </div>
+      </div> 
+<div style="height:5px;background-color:#EEEEEE"></div>
+
+<div style="height:5px;background-color:#EEEEEE"></div>
+<div id="ECS_COMMENT">
+<link href="css/photoswipe.css" rel="stylesheet" type="text/css">
+
+<script src="js/photoswipe.js.下载"></script>
+
+
+
+<script language="javascript">
+
+function ShowMyComments(goods_id, type, page,tag)
+{
+	Ajax.call('goods_comment.php?act=list_json', 'goods_id=' + goods_id + '&type=' + type + '&page='+page+'&c_tag='+tag, ShowMyCommentsResponse, 'GET', 'JSON');
+}
+
+function ShowMyCommentsResponse(result)
+{
+  if (result.error)
+  {
+
+  }
+
+  try
+  {
+    var layer = document.getElementById("ECS_MYCOMMENTS");
+    layer.innerHTML = result.content;
+    var myPhotoSwipe = $("#gallery a").photoSwipe({ 
+		enableMouseWheel: false, 
+		enableKeyboard: false, 
+		allowUserZoom: false, 
+		loop:false
+	});
+  }
+  catch (ex) {}
+}
+
+</script></div>
+ 
+        <script language="javascript">
+            ShowMyComments(482,0,1);
+            function show_good(comment_id)
+            {
+                Ajax.call('goods_comment.php?act=good_json', 'comment_id=' + comment_id, show_goodResponse, 'GET', 'JSON');
+            }
+            function show_goodResponse(result)
+            {
+                if (result.error == 1)
+                {
+                    alert("您已经评过分了哦！");
+                }
+                else
+                {
+                    var layer = document.getElementById("good_num_"+result.comment_id);
+                    layer.innerHTML = result.good_num;
+                }
+            }
+        </script>
+      </div>
+<style>
+    .block_div {width: 100%;height: 100%;background-color: #000000;opacity: 0.8;display: none;z-index: 200;}
+    .show_block {display: block;position: fixed;top: 0;}
+    .body_block {overflow: hidden;}
+    .share_arrow img {
+        width: 80%;
+        margin: 10%;
+    }
+    .share_word {
+        color: #ffffff;
+        text-align: center;
+        font-size: 16px;
+        font-weight: bolder;
+    }
+</style>
+<div class="block_div" id="block_div">
+    <div class="share_arrow">
+        <img src="images/share_arrow1.png">
+    </div>
+</div>
+
+        <script src="js/jweixin-1.0.0.js.下载"></script>
+        <script>//alert(location.href.split('#')[0]);
+       $(document).ready(function(){
+        wx.config({
+                    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                    appId: 'wxf6f1e4bba5286f95', // 必填，公众号的唯一标识
+                    timestamp: '1546844722', // 必填，生成签名的时间戳
+                    nonceStr: 'Wm3WZYTPz0wzccnW', // 必填，生成签名的随机串
+                    signature: 'c8df8d8793b299f85b03929dc9f5736a082a195d',// 必填，签名，见附录1
+                    jsApiList: ['onMenuShareAppMessage','checkJsApi','onMenuShareTimeline','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+                });
+                wx.checkJsApi({
+                    jsApiList: ['onMenuShareAppMessage','onMenuShareTimeline','onMenuShareQQ','onMenuShareWeibo','onMenuShareQZone'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+                    success: function(res) {
+                        // 以键值对的形式返回，可用的api值true，不可用为false
+                    }
+                });
+                wx.error(function(res){
+
+                    // config信息验证失败会执行error函数，如签名过期导致验证失败，具体错误信息可以打开config的debug模式查看，也可以在返回的res参数中查看，对于SPA可以在这里更新签名。
+
+                });
+                wx.ready(function(){
+                // config信息验证后会执行ready方法，所有接口调用都必须在config接口获得结果之后，config是一个客户端的异步操作，所以如果需要在页面加载时就调用相关接口，则须把相关接口放在ready函数中调用来确保正确执行。对于用户触发时才调用的接口，则可以直接调用，不需要放在ready函数中。
+                    wx.onMenuShareAppMessage({
+                        title: title, // 分享标题
+                        desc: description, // 分享描述
+                        link: link, // 分享链接
+                        imgUrl: imgUrl, // 分享图标
+                        type: '', // 分享类型,music、video或link，不填默认为link
+                        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                        success: function () {
+                            // 用户确认分享后执行的回调函数
+                        },
+                        cancel: function () {
+                            // 用户取消分享后执行的回调函数
+                        }
+                    });
+                    wx.onMenuShareTimeline({
+                        title: title, // 分享标题
+                        link: link, // 分享链接
+                        imgUrl: imgUrl, // 分享图标
+                        success: function () {
+                            // 用户确认分享后执行的回调函数
+                        },
+                        cancel: function () {
+                            // 用户取消分享后执行的回调函数
+                        }
+                    });
+                    wx.onMenuShareQQ({
+                        title: title, // 分享标题
+                        desc: description, // 分享描述
+                        link: link, // 分享链接
+                        imgUrl:imgUrl, // 分享图标
+                        success: function () {
+                           // 用户确认分享后执行的回调函数
+                        },
+                        cancel: function () {
+                           // 用户取消分享后执行的回调函数
+                        }
+                    });
+                    wx.onMenuShareWeibo({
+                        title: title, // 分享标题
+                        desc: description, // 分享描述
+                        link: link, // 分享链接
+                        imgUrl:imgUrl, // 分享图标
+                        success: function () {
+                           // 用户确认分享后执行的回调函数
+                        },
+                        cancel: function () {
+                           // 用户取消分享后执行的回调函数
+                        }
+                    });
+                    wx.onMenuShareQZone({
+                        title: title, // 分享标题
+                        desc: description, // 分享描述
+                        link: link, // 分享链接
+                        imgUrl:imgUrl, // 分享图标
+                        success: function () {
+                           // 用户确认分享后执行的回调函数
+                        },
+                        cancel: function () {
+                           // 用户取消分享后执行的回调函数
+                        }
+                    });
+                });
+                });
+        </script>  
+</body></html>

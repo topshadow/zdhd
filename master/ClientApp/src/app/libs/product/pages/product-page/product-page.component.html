@@ -11,16 +11,23 @@
   <dxi-column dataField="code" [caption]="'产品代码'"></dxi-column>
   <dxi-column dataField="productImages" [caption]="'产品组图'" editCellTemplate="editCellTemplate" cellTemplate="cellTemplate"></dxi-column>
   <dxi-column dataField="name" [caption]="'产品名称'"></dxi-column>
-  <dxi-column dataField="subProducts" [caption]="'子产品'" editCellTemplate="subProductEditCellTemplate" cellTemplate="subProductCellTemplate" ></dxi-column>
+  <dxi-column dataField="subProducts" [caption]="'子产品'" editCellTemplate="subProductEditCellTemplate" cellTemplate="subProductCellTemplate"></dxi-column>
   <dxi-column dataField="summary" [caption]="'产品简介'"></dxi-column>
-  <dxi-column dataField="html" [caption]="'内容'"></dxi-column>
+  <dxi-column dataField="html" [caption]="'图文介绍'" editCellTemplate="htmlEditCellTemplate" cellTemplate="htmlCellTemplate"></dxi-column>
   <dxi-column dataField="status" [caption]="'产品状态'"></dxi-column>
-  <dxi-column dataField="totalViewNum" dataType="number" [caption]="'点击查看数量'"></dxi-column>
-  <dxi-column dataField="createTime" dataType="date" [caption]="'发布日期'"></dxi-column>
 
-<!--产品图片-->
+  <dxi-column dataField="productTagId" [caption]="'产品标签'">
+    <dxo-lookup [dataSource]="productTagDataSource"
+                valueExpr="productTagId"
+                displayExpr="name">
+
+    </dxo-lookup>
+  </dxi-column>
+  <dxi-column dataField="totalViewNum" dataType="number" [caption]="'点击查看数量'"></dxi-column>
+
+  <!--产品图片-->
   <div *dxTemplate="let cellInfo of 'cellTemplate'">
-    <image-lookup [value]="cellInfo.value"></image-lookup>
+    <image-lookup [value]="cellInfo.value" [keyExpr]="'url'"></image-lookup>
   </div>
   <div *dxTemplate="let cellInfo of 'editCellTemplate'">
     <image-lookup [(value)]="cellInfo.value" [keyExpr]="'url'" (valueChange)="cellInfo.setValue($event)" [mode]="ModeEnum.Create"></image-lookup>
@@ -34,7 +41,7 @@
     <dx-popup class="popup" [width]="'100%'" [showTitle]="true" title="查看子产品" [dragEnabled]="false"
               [closeOnOutsideClick]="true" [(visible)]="subProductsPopVisible">
       <dx-data-grid id="subProducts" [dataSource]="cellInfo.value" [showBorders]="true">
-        <dxo-editing mode="popup" >
+        <dxo-editing mode="popup">
           <dxo-popup title="编辑"
                      [showTitle]="true"
                      [width]="700"
@@ -46,13 +53,14 @@
         <dxi-column dataField="price" dataType="number" [caption]="'价格'"></dxi-column>
         <dxi-column dataField="totalSaleNum" dataType="number" [caption]="'库存数量'"></dxi-column>
       </dx-data-grid>
-      </dx-popup>
+    </dx-popup>
   </div>
   <div *dxTemplate="let cellInfo of 'subProductEditCellTemplate'">
-    <dx-button text="管理子产品"  type="success" (onClick)="subProductsEditPopVisible=true" ></dx-button>
+    <dx-button text="管理子产品" type="success" (onClick)="subProductsEditPopVisible=true"></dx-button>
     <dx-popup class="popup" [width]="'100%'" [showTitle]="true" title="管理子产品" [dragEnabled]="false"
               [closeOnOutsideClick]="true" [(visible)]="subProductsEditPopVisible">
-      <dx-data-grid id="subProducts" [dataSource]="cellInfo.value" [showBorders]="true" >
+
+      <dx-data-grid id="subProducts" [dataSource]="cellInfo.value?cellInfo.value:[]" [showBorders]="true" (onRowInserted)="selectedCellInfoValue=$event.data;cellInfo.setValue(cellInfo.value?cellInfo.value.concat($event.data):[$event.data]);">
         <dxo-editing mode="popup" [allowAdding]="true" [allowUpdating]="true" [allowDeleting]="true">
           <dxo-popup title="编辑"
                      [showTitle]="true"
@@ -69,6 +77,52 @@
   </div>
 
 
+  <!--  -->
+  <div *dxTemplate="let cellInfo of 'htmlEditCellTemplate'">
+    <dx-button (click)="htmlEditVisible=true" text="查看"></dx-button>
+    <dx-popup class="popup" [width]="'100%'" [showTitle]="true" title="产品图文介绍" [dragEnabled]="false"
+              [closeOnOutsideClick]="true" [(visible)]="htmlEditVisible">
+      <dx-html-editor [value]="cellInfo.value" (valueChange)="cellInfo.setValue($event)">
+        <dxo-toolbar>
+          <dxi-item formatName="undo"></dxi-item>
+          <dxi-item formatName="redo"></dxi-item>
+          <dxi-item formatName="separator"></dxi-item>
+          <dxi-item formatName="size" [formatValues]="['8pt', '10pt', '12pt', '14pt', '18pt', '24pt', '36pt']"></dxi-item>
+          <dxi-item formatName="font" [formatValues]="['Arial', 'Courier New', 'Georgia', 'Impact', 'Lucida Console', 'Tahoma', 'Times New Roman', 'Verdana']"></dxi-item>
+          <dxi-item formatName="separator"></dxi-item>
+          <dxi-item formatName="bold"></dxi-item>
+          <dxi-item formatName="italic"></dxi-item>
+          <dxi-item formatName="strike"></dxi-item>
+          <dxi-item formatName="underline"></dxi-item>
+          <dxi-item formatName="separator"></dxi-item>
+          <dxi-item formatName="alignLeft"></dxi-item>
+          <dxi-item formatName="alignCenter"></dxi-item>
+          <dxi-item formatName="alignRight"></dxi-item>
+          <dxi-item formatName="alignJustify"></dxi-item>
+          <dxi-item formatName="separator"></dxi-item>
+          <dxi-item formatName="header" [formatValues]="[false, 1, 2, 3, 4, 5]"></dxi-item>
+          <dxi-item formatName="separator"></dxi-item>
+          <dxi-item formatName="orderedList"></dxi-item>
+          <dxi-item formatName="bulletList"></dxi-item>
+          <dxi-item formatName="separator"></dxi-item>
+          <dxi-item formatName="color"></dxi-item>
+          <dxi-item formatName="background"></dxi-item>
+          <dxi-item formatName="separator"></dxi-item>
+          <dxi-item formatName="link"></dxi-item>
+          <dxi-item formatName="image"></dxi-item>
+          <dxi-item formatName="separator"></dxi-item>
+          <dxi-item formatName="clear"></dxi-item>
+          <dxi-item formatName="codeBlock"></dxi-item>
+          <dxi-item formatName="blockquote"></dxi-item>
+        </dxo-toolbar>
+
+        <h2>
+          产品介绍
+        </h2>
+
+      </dx-html-editor>
+    </dx-popup>
+  </div>
 </dx-data-grid>
 
 

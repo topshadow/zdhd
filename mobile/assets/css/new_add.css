@@ -1,0 +1,192 @@
+body,html{margin:0;padding:0;height:100%}
+body{min-width:320px;margin:0;padding:0;font-family:"microsoft yahei",Verdana,Arial,Helvetica,sans-serif;font-size:1em}
+a{text-decoration:none}
+img{max-width:100%;vertical-align:middle}
+*{margin:0;padding:0}
+div{margin:0;padding:0}
+li,ul{list-style:none}
+em{font-style:normal}
+.body{width:100%;max-width:640px;margin:0 auto;padding-bottom:3.2rem;box-sizing:border-box;
+}
+.shop{width:100%;height:2.3rem;border-bottom:1px solid #dcdcdc;line-height:2.3rem;padding-left:2rem;box-sizing:border-box}
+.shop i{display:inline-block;width:1.3rem;height:1.2rem;vertical-align:sub;margin-right:5px}
+.product{width:100%;padding-bottom:3.05rem;padding-top: 1rem;}
+.sb-back{
+    background: url(../images/top.png) no-repeat;
+    background-size: auto 230px;
+}
+
+/* 页面头部  */
+.header { width:100%; height:45px; background:#ffffff;top:0; z-index:9999; border:0; border-bottom:1px solid #CCC}
+.h-left{float:left;width:30px; height:45px;}
+.h-left a{ display:block; width:30px; height:45px; background-position:5px 9px; }
+
+.h-right{float:right; width:30px;height:45px; line-height:45px; margin-right:10px;}
+.top_bar{float:right; display:block; width:30px; height:45px;}
+#show_more{width:30px; height:45px;background-position:5px -28px;}
+
+.h-mid { height:45px; float:left; text-align:left; color:#666; font-size:18px; line-height:45px; position:relative;font-family: "宋体", "宋体", Arial, Helvetica, sans-serif;}
+.h-mid h6 { color:#333; font-size:16px; font-family: "宋体", "宋体", Arial, Helvetica, sans-serif; font-weight:normal;}
+
+
+.product-ckb em{width:1.1rem;height:1.1rem;border-radius:50%;border:1px solid #B8B4B4;display:inline-block;cursor:pointer;vertical-align: middle;}
+.product-ckb .product-xz{border:0;display:inline-block;    background: url(../images/gouico.png) no-repeat 0 0;
+    background-size: 1.1rem;vertical-align: middle;}
+
+.product-ckb span{
+    display: inline-block;
+    margin-left: 5px;
+}   
+
+
+.add-item{
+    width: 90%;
+    overflow: hidden;
+    margin-bottom: 6px;
+    margin: 0.5rem auto;
+    height: 3.8rem;
+    background: #ffffff;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+    -ms-box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+    -webkit-box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+    -o-box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+}
+
+
+
+.clear{
+    clear: both;
+}
+
+.product-box .product-ckb{    height: 32%;
+    display: inline-block;
+    float: left;
+    text-align: center;
+    line-height: 5.9rem;
+    z-index: 99;
+    position: absolute;
+    top: 100px;
+    left: 22px;}
+.add-item .product-box{
+    width: 100%;
+    height: 3.8rem;
+    overflow: hidden;
+    position: relative;
+    background: #ffffff;
+    margin-bottom: 2px;}
+
+
+
+
+.item{display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px #d8d8d8 dashed;
+    font-size: 16px;
+    margin-left: 30px;
+    margin-right: 30px;}
+.item label{width:32%;
+    color: #090909;    font-size: 15px;
+}
+.item label img{width:22px;display:block}
+.item input{width:46%;font-size:16px;border:0;outline:0}
+.item .see{display:inline-block;
+    width: 52px;
+    height: 22px;
+    margin-left: 30px;
+    border: 1px solid #411c90;
+    text-align: center;
+    line-height: 22px;    color: #411c90;
+}
+#result_Mobile{
+    display: inline-block;
+    width: 80px;
+    height: 22px;
+    text-align: center;
+    line-height: 22px;
+}
+.Detailed{
+    border-bottom: 0 none;
+    border-top: 1px #d8d8d8 dashed;
+    padding-top: 9px;
+}
+
+.defau_add{
+    width: 90%;
+    overflow: hidden;
+    margin-bottom: 6px;
+    margin: 0.5rem auto;
+    height: 0.8rem;
+    background: #ffffff;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+    -ms-box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+    -moz-box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+    -webkit-box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+    -o-box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+    line-height: 0.8rem;
+}
+
+.defau_add label {
+    width: 32%;
+    color: #090909;
+    font-size: 15px;
+    margin-left: 0.6rem;
+}
+.defau_add label span{
+    display: inline-block;
+    float: right;
+}
+
+.btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+}
+.btn span, .easy-btn span {
+    display: inline-block;
+    width: 70%;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: #fff;
+    line-height: 1.8;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.btn span {
+    background: linear-gradient(to top, rgb(0, 149, 252), rgb(66, 26, 142));
+    border-width: initial;
+}
+
+@media screen and (max-width:320px){
+    .add-item{
+        width: 90%;
+        overflow: hidden;
+        margin-bottom: 6px;
+        margin: 0.5rem auto;
+        height: 4.8rem;
+        background: #ffffff;
+        box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+        -ms-box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+        -moz-box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+        -webkit-box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+        -o-box-shadow: 0 1px 8px rgba(0,0,0,0.09);
+    }
+    .add-item .product-box {
+        width: 100%;
+        height: 4.8rem;
+        overflow: hidden;
+        position: relative;
+        background: #ffffff;
+        margin-bottom: 2px;
+    }
+    .item label {
+        width: 35%;
+        color: #090909;
+        font-size: 15px;
+    }
+}

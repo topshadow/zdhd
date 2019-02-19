@@ -66,7 +66,7 @@ namespace Wings.Framework.Product.Controllers
         /// <param name="key"></param>
         /// <returns></returns>
         [HttpDelete]
-        public bool Delete(int key)
+        public bool Delete([FromForm]int key)
         {
 
             var menu = this.productContext.Products.Find(key);
@@ -81,7 +81,7 @@ namespace Wings.Framework.Product.Controllers
         /// <param name="bodyData"></param>
         /// <returns></returns>
         [HttpPut]
-        public bool Put(int key, BodyData bodyData)
+        public bool Put([FromForm] int key,[FromForm] BodyData bodyData)
         {
             var product = this.productContext.Products.Find(key);
             

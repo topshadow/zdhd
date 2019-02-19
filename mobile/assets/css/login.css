@@ -1,0 +1,73 @@
+body{
+    background:#f4f8fc;
+}
+.loginer{
+    font-size: 25px;font-weight: normal;color: #090909;
+    padding-top: 40px;margin-left: 30px;
+}
+.mainContent{background:#ffffff;width: 88vw;margin: 0 auto;}
+header{margin: 0 20px 15px 0;
+    text-align: center;
+    margin-top: 17px;
+}
+header img{width:28%;height:auto;margin-top:22px;margin-bottom:30px}
+.item{display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px #d8d8d8 dashed;
+    font-size: 16px;
+    margin-left: 30px;
+    margin-right: 30px;}
+.item label{width:29%;
+    color: #e0e2dd;
+}
+.item label img{width:22px;display:block}
+.item input{width:42%;font-size:16px;border:0;outline:0}
+.item .see{display:inline-block;
+    width: 52px;
+    height: 22px;
+    margin-left: 30px;
+    border: 1px solid #411c90;
+    text-align: center;
+    line-height: 22px;    color: #411c90;
+}
+#result_Mobile{
+    display: inline-block;
+    width: 80px;
+    height: 22px;
+    margin-left: 28px;
+    text-align: center;
+    line-height: 22px;
+}
+.btn{width:100%;text-align:center;margin-top:50px;padding-bottom: 50px;}.easy-btn{line-height:0}
+.btn span,.easy-btn span{display:inline-block;width: 84%;
+    padding: 10px 15px;border-radius:10px;font-size:14px;color:#fff;line-height:1.8;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}.loginBtn p{margin:10px;color:#b4b8ba;font-size:12px}
+.btn span{    background: linear-gradient(to top, rgb(0, 149, 252), rgb(66, 26, 142));border-width: initial;}.easy-btn span{background:#708189}
+.operation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-top: 6%;
+    color: #b4b8ba;
+    font-size: 12px;
+    width: 84%;
+    margin: 20px auto;}
+.operation span{
+    display: inline-block;
+    width: 22%;
+    height: 1px;
+    background: #9d9d9d;
+}
+.operation h5{
+    margin: 0 25px;
+}
+input::-webkit-input-placeholder{color:#dcddd8;font-size:15px}
+input:-moz-placeholder{color:#dcddd8;font-size:15px}input::-moz-placeholder{color:#dcddd8;font-size:15px}input:-ms-input-placeholder{color:#dcddd8;font-size:15px}
+.wechart{
+    width: 60px;
+    margin: 0 auto;
+    height: 60px;
+}

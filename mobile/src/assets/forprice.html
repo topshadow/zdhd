@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+		<title>待付款信息</title>
+		<link rel="stylesheet" type="text/css" href="css/forprices.css"/>
+		<script type="text/javascript" src="js/common.js.下载"></script>
+		<script type="text/javascript" src="js/jquery.js.下载"></script>
+		<script type="text/javascript" src="js/mobile.js.下载"></script>
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/shoppingcart.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			function choose_attrone(num){
+				$("#choose_attr1").animate({height:'50%'},[10000]);
+					var total=0,h=$(window).height(),
+					top =$('.good_canshu').height()||0,
+					con = $('.xiangq');
+					total = 0.8*h;
+					con.height(total-top+'px');
+				$(".f_mask1").show();
+			}
+			function close_choose_attr1(){	
+				$(".f_mask1").hide();
+				$('#choose_attr1').animate({height:'0'},[10000]);
+			}
+		</script>
+	</head>
+	<body style="background: #f4f8fc;">
+		<div class="body">
+			<!-- 页面头部 -->
+			<div class="header" style=" position:relative">
+				<div class="h-left"> <a class="sb-back" href="javascript:history.back(-1)" title="返回"></a> </div>
+				<div class="h-mid"> 待付款 </div>
+            </div>
+
+            <!-- 地址部分 -->
+			<!-- 订单号信息 -->
+			<div class="ordernum">
+				<h3 class="num">订单号：123456456466</h3>
+				<h4 class="sens_god">待付款</h4>
+			</div>
+			<div class="clear"></div>
+
+			<div class="add-item">
+				<div class="product-box">
+					<div class="img"><img src="images/m_wine.png"></div>
+					<div class="txt">
+						<h6>百年大福6年·酱香型白500ML</h6>
+						<h6 style="padding-top: 0.2rem!important;">*6(整箱装)</h6>
+						<p>500ML</p>
+						<span class="product-price">¥&thinsp;<span class="price">680.00元</span></span>
+						<span class="product-num">×1</span>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="check-pro">
+					<div class="product-al">
+						合计：<span>¥680.00</span>
+					</div>
+					<a href="Logistics.html"><div class="Modify">查看物流</div></a>
+					<a onclick="choose_attrone(0)"><div class="payment">付款</div></a>
+				</div>
+			</div>
+
+
+			<!-- 地址部分 -->
+			<!-- 订单号信息 -->
+			<div class="ordernum">
+				<h3 class="num">订单号：123456456466</h3>
+				<h4 class="sens_god">待付款</h4>
+			</div>
+			<div class="clear"></div>
+
+			<div class="add-item">
+					<div class="product-box">
+						<div class="img"><img src="images/m_wine.png"></div>
+						<div class="txt">
+							<h6>百年大福6年·酱香型白500ML</h6>
+							<h6 style="padding-top: 0.2rem!important;">*6(整箱装)</h6>
+							<p>500ML</p>
+							<span class="product-price">¥&thinsp;<span class="price">680.00元</span></span>
+							<span class="product-num">×1</span>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="check-pro">
+						<div class="product-al">
+							合计：<span>¥680.00</span>
+						</div>
+						<a href="Logistics.html"><div class="Modify">查看物流</div></a>
+						<a onclick="choose_attrone(0)">
+							<div class="payment">付款</div>
+						</a>
+						
+
+					</div>
+			</div>
+			
+
+			
+
+
+			<div class="qb_tac">
+				已经到底啦~
+			</div>
+
+			<section class="f_mask1" style="display: none;" onclick="close_choose_attr1();"></section>
+			<section class="f_block1" id="choose_attr1" style="height:0; overflow:hidden;">
+				<a href="javascript:void(0)" onclick="close_choose_attr1();" class="shut" style=" color:#FFF;font-size:18px;"><img src="images/cloce.png" alt=""></a>
+				<section class="good_canshu">  
+					<ul>
+						<li class="confirm">确认支付</li>
+						<li class="m_pay">支付方式<span>微信</span></li>
+						<div class="clear"></div>
+						<li class="m_price">支付金额<span>￥1188</span></li>
+						<li class="m_add">收获地址 <span>xxx</span></li>  
+						<li class="x_add">
+							<p class="x_addp">广东省深圳高宝安区XXX...广东省深圳高宝安区XXX宝安区XXX... <span><img src="images/btn_return_nor@2x.png" alt=""></span></p>
+						</li>  
+						<div class="f_foot">
+							<a href="suc_pay.html"><input type="submit" border="0" class="add_gift_attr" value="立即付款"></a>
+						</div>
+					</ul>
+				</section>
+			</section>
+		
+	</body>
+
+</html>

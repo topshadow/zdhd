@@ -7,7 +7,14 @@ export class ProductPageComponent {
   subProductsEditPopVisible: boolean = false;
   subProductsPopVisible: boolean = false;
   ModeEnum = ModeEnum;
-  productUrl = environment.ip+"/api/Product/Product"
+  productTagUrl = environment.ip+ "/api/Product/ProductTag";
+  productTagDataSource = AspNetData.createStore({
+    loadUrl: this.productTagUrl,
+    insertUrl: this.productTagUrl,
+    updateUrl: this.productTagUrl,
+    deleteUrl: this.productTagUrl
+  })
+  productUrl = environment.ip + "/api/Product/Product";
   productDataSource = AspNetData.createStore({
     key:"productId",
     loadUrl: this.productUrl,
@@ -15,4 +22,7 @@ export class ProductPageComponent {
     updateUrl: this.productUrl,
     deleteUrl: this.productUrl
   });
+
+  htmlVisible: boolean = false;
+  htmlEditVisible: boolean = false;
 }

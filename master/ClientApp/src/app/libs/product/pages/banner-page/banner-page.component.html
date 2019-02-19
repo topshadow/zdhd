@@ -1,0 +1,34 @@
+<dx-data-grid id="banners" [dataSource]="bannerDataSource" [showBorders]="true">
+  <dxo-editing mode="popup" [allowAdding]="true" [allowUpdating]="true" [allowDeleting]="true">
+    <dxo-popup title="编辑"
+               [showTitle]="true"
+               [width]="700"
+               [height]="600"
+               [position]="{ my: 'center', at: 'center', of: window }">
+    </dxo-popup>
+  </dxo-editing>
+  <dxo-filter-row [visible]="true"></dxo-filter-row>
+  <dxo-header-filter [visible]="true"></dxo-header-filter>
+  <dxo-remote-operations [filtering]="true" [sorting]="true" [grouping]="true"></dxo-remote-operations>
+  <dxi-column dataField="imageUrl" [caption]="'图片'" cellTemplate="cellTemplate" editCellTemplate="editCellTemplate"></dxi-column>
+  <dxi-column dataField="productId" [caption]="'备注'"></dxi-column>
+
+
+  <dxi-column dataField="productId" [caption]="'产品'">
+    <dxo-lookup [dataSource]="productDataSource"
+                valueExpr="productId"
+                displayExpr="name">
+    </dxo-lookup>
+  </dxi-column>
+  <dxi-column dataField="createTime" [caption]="'创建时间'" [formItem]="{visible:false}"></dxi-column>
+
+
+  <!--图片-->
+  <div *dxTemplate="let cellInfo of 'cellTemplate'">
+    <image-lookup [value]="cellInfo.value" [isMultity]="false"></image-lookup>
+  </div>
+  <div *dxTemplate="let cellInfo of 'editCellTemplate'">
+    <image-lookup [(value)]="cellInfo.value" [isMultity]="false" (valueChange)="cellInfo.setValue($event)" [mode]="ModeEnum.Create"></image-lookup>
+  </div>
+
+</dx-data-grid>

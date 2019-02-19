@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+		<title>申请退款</title>
+		<link rel="stylesheet" type="text/css" href="css/ref_apl.css"/>
+		<script type="text/javascript" src="js/common.js.下载"></script>
+		<script type="text/javascript" src="js/jquery.js.下载"></script>
+		<script type="text/javascript" src="js/mobile.js.下载"></script>
+		<script src="js/shoppingcart.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/shoppingcart.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			function choose_attrone(num){
+				$("#choose_attr1").animate({height:'50%'},[10000]);
+					var total=0,h=$(window).height(),
+					top =$('.good_canshu').height()||0,
+					con = $('.xiangq');
+					total = 0.8*h;
+					con.height(total-top+'px');
+				$(".f_mask1").show();
+			}
+			function close_choose_attr1(){	
+				$(".f_mask1").hide();
+				$('#choose_attr1').animate({height:'0'},[10000]);
+			}	
+		</script>
+
+	</head>
+	<body style="background: #f4f8fc;">
+		<div class="body">
+			<!-- 页面头部 -->
+			<div class="header" style=" position:relative">
+				<div class="h-left"> <a class="sb-back" href="javascript:history.back(-1)" title="返回"></a> </div>
+				<div class="h-mid"> 申请退款 </div>
+            </div>
+
+            <!-- 地址部分 -->
+			<!-- 订单号信息 -->
+			<div class="order_scu">
+
+				<div class="add-item">
+					<div class="product-box">
+						<div class="img"><img src="images/m_wine.png"></div>
+						<div class="txt">
+							<h6>百年大福6年·酱香型白500ML</h6>
+							<h6 style="padding-top: 0.2rem!important;">*6(整箱装)</h6>
+							<span class="product-price">¥&thinsp;<span class="price">680.00元</span></span>
+						</div>
+					</div>
+					<div class="clear"></div>
+					
+				</div>
+			</div>
+			
+			<div class="producter">
+				<div class="producter_con">
+					<a onclick="choose_attrone(0)"><div class="address"><strong>退款原因</strong><span><img src="images/btn_return_nor@2x.png" alt=""></span><t>请选择</t></div></a>
+					
+				</div>
+				<div class="clear"></div>
+				<a href=""><div class="addresser"><strong>退款金额：</strong><span>￥980.00</span></div></a>
+				<div class="instructions">
+					<strong>退款说明：</strong>
+				</div>
+				<textarea rows="10" cols="30" id="contentext" style="border: 0 none">对收到的宝贝满意吗？</textarea>
+			</div>
+			
+			<section class="f_mask1" style="display: none;" onclick="close_choose_attr1();"></section>
+			<section class="f_block1" id="choose_attr1" style="height:0; overflow:hidden;">
+				<section class="good_canshu">  
+					<ul>	
+						<li class="confirm">退款原因</li>
+						<li class="m_add">
+							不想要了
+							<div class="product-ckb"><em class="product-em product-xz"></em></div>
+						</li>
+						<div class="clear"></div>
+						<li class="m_add">
+							商家未按约定时间发货
+							<div class="product-ckbr"><em class="product-em"></em></div>
+						</li>
+						<li class="m_add">
+							对商家服务不满意
+							<div class="product-ckbt"><em class="product-em"></em></div>
+						</li>  
+						<li class="m_add">
+							货物质量问题
+							<div class="product-ckbq"><em class="product-em"></em></div>
+						</li>  
+						<li class="m_add">
+							其他
+							<div class="product-ckbv"><em class="product-em"></em></div>
+						</li>  
+						<div class="f_foot">
+							<a href=""><input type="submit" border="0" class="add_gift_attr" value="提交"></a>
+						</div>
+					</ul>
+				</section>
+			</section>
+
+			<script>
+					$('.m_add').click(function(){
+						//debugger;
+						$('.product-em').removeClass("product-xz")
+						$(this).find('.product-em').toggleClass("product-xz");
+					});
+			</script>
+
+	</body>
+
+</html>

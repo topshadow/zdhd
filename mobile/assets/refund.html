@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+    <title>申请退款</title>
+    <link rel="stylesheet" type="text/css" href="css/forgood.css" />
+    <link rel="stylesheet" type="text/css" href="css/published.css" />
+    <script type="text/javascript" src="js/common.js.下载"></script>
+    <script type="text/javascript" src="js/jquery.js.下载"></script>
+    <script type="text/javascript" src="js/mobile.js.下载"></script>
+    <script src="js/shoppingcart.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body style="background: #f4f8fc;min-height: 100%;">
+    <div class="body">
+        <!-- 页面头部 -->
+        <div class="header" style=" position:relative">
+            <div class="h-left">
+                <a class="sb-back" href="javascript:history.back(-1)" title="返回"></a>
+            </div>
+            <div class="h-mid"> 申请退款 </div>
+        </div>
+        <div class="goods">
+            <div class="goods-box">
+                <div class="goods-box-left">
+                    <img src="./images/big_wine.png" alt="">
+                </div>
+                <div class="goods-box-right">
+                    <p>百年大福.6年酱香型白酒500ML *6(整箱装)</p>
+                    <span>500ML</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="refund-list">
+            <div class="refund-list-box" style=" border-bottom: 0.55px solid #b5b5b5;">
+                <label>退款原因</label>
+                <a class="sb-back" title="返回"></a>
+                <small>请选择</small>
+                
+            </div>
+            <div class="refund-list-box">
+                <label>退款金额:</label>
+                <span>￥980.00</span>
+            </div>
+        </div>
+        <div class="goods-describe">
+            <div class="goods-describe-box">
+                <div class="goods-describe-box-title">
+                    <span>退款说明:</span> 
+                </div>
+                <div class="goods-describe-box-box border-none">
+                    <div class="goods-describe-box-box-text">
+                        <textarea placeholder="对宝贝不满意吗"></textarea>
+                    </div>
+                    <div class="goods-describe-box-box-img">
+                        <div class="img-box">
+                            <img src="./images/big_wine.png" alt="" class="img-show">
+                            <img src="./images/btn_goback_nor@2x.png" alt="" class="chacha" onclick="remove(this)">
+                        </div>
+                        <div class="img-box">
+                            <img src="./images/big_wine.png" alt="" class="img-show">
+                            <img src="./images/btn_goback_nor@2x.png" alt="" class="chacha" onclick="remove(this)">
+                        </div>
+                        <div class="img-box">
+                            <img src="./images/big_wine.png" alt="" class="img-show">
+                            <img src="./images/btn_goback_nor@2x.png" alt="" class="chacha" onclick="remove(this)">
+                        </div>
+                        <div class="img-box">
+                            <img src="./images/big_wine.png" alt="" class="img-show">
+                            <img src="./images/btn_goback_nor@2x.png" alt="" class="chacha" onclick="remove(this)">
+                        </div>
+                        <div class="img-add">
+                            <img src="./images/ssdsd.png" alt="" class="img-addimgs" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </div>
+    <div class="btn-add">
+        提交
+    </div>
+
+
+
+
+
+    <!-- 添加照片模态 -->
+ 
+    <div class="add-img-module" style="display:none">
+        <div class="add-op">
+            <div class="add-op-pz" onclick="takPhoto()">拍照</div>
+            <div class="add-op-pz" onclick="selectImage()">从相册选择</div>
+            <div class="add-op-pz" onclick="cancel()">取消</div>
+        </div>
+    </div> 
+
+    <!-- 取消发布 -->
+    <!-- <div class="add-img-module">
+        <div class="cas">
+            <div class="cs-text">确认取消发布？</div>
+            <div class="cs-btn-box">
+                <div class="cs-btn-box-btn">继续发布</div>
+                <div class="cs-btn-box-btn">取消发布</div>
+            </div>
+        </div>
+    </div> -->
+<script>
+$('.img-addimgs').click(()=>{
+$('.add-img-module').show();
+
+})
+function takPhoto(){
+    cancel();
+    let fileReader= new FileReader();
+    fileReader.onload= function(e){
+       let base64= e.target.result;
+       $(` <div class="img-box">
+            <img src="${base64}" alt="" class="img-show">
+            <img src="./images/btn_goback_nor@2x.png" alt="" class="chacha"  onclick="remove(this)">
+        </div>`).insertBefore(`.img-add`);
+    }
+    let inputEl= document.createElement('input');
+    inputEl.type="file";
+    inputEl.capture="camera"
+    inputEl.accept="image/*"
+    inputEl.onchange=function(e){
+        fileReader.readAsDataURL(this.files[0])
+    }
+    inputEl.click();
+    setTimeout(()=>{
+        if(inputEl.files){
+            if(inputEl.files[0])console.log('file')
+        }
+    },5000)
+}
+function selectImage(){
+    cancel();
+    let fileReader= new FileReader();
+    fileReader.onload= function(e){
+       let base64= e.target.result;
+   $(` <div class="img-box">
+        <img src="${base64}" alt="" class="img-show">
+        <img src="./images/btn_goback_nor@2x.png" alt="" class="chacha"  onclick="remove(this)">
+    </div>`).insertBefore(".img-add")
+    }
+    let inputEl= document.createElement('input');
+    inputEl.type="file";
+    inputEl.accept="image/*"
+    inputEl.onchange=function(e){
+
+        fileReader.readAsDataURL(this.files[0])
+    }
+    inputEl.click();
+    setTimeout(()=>{
+        if(inputEl.files){
+            if(inputEl.files[0])console.log('file')
+        }
+    },5000)
+}
+function remove(dom){
+$(dom).parent().remove();
+}
+function cancel(){
+    $('.add-img-module').hide();
+}
+function selectStar(num){
+let imgs= $('.goods-describe-box-title img').toArray();
+   let activeImgs= imgs.splice(0,num);
+   imgs.forEach(img=>$(img).attr('src','./images//evaluation_btn_check_nor@2x.png'));
+activeImgs.forEach(img=>$(img).attr('src',"./images/evaluation_btn_check_set@2x.png"));
+let summary='';
+switch(num){
+    case 1:
+    summary="口感极差";
+    break;
+    case 2:
+    summary="口感一般";
+    break;
+    case 3:
+    summary="口感良好";
+    break;
+    case 4:
+    summary="口感极致";
+    break;
+    case 5:
+    summary="物超所值";
+    break;
+}
+$('.summary').text(summary)
+}
+</script>
+</body>
+
+
+</html>
+

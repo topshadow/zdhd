@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+		<title>订单详情</title>
+		<link rel="stylesheet" type="text/css" href="css/suc_del.css"/>
+		<script type="text/javascript" src="js/common.js.下载"></script>
+		<script type="text/javascript" src="js/jquery.js.下载"></script>
+		<script type="text/javascript" src="js/mobile.js.下载"></script>
+		<script src="js/shoppingcart.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+				$(function(){
+				
+	
+					$(".del").click(function(){
+						if(confirm("您确定要删除当前商品？")){
+							$(this).closest(".body").remove();
+						}
+						
+						koncat();
+						TotalPrice();
+						shuliang();
+					});
+					
+	
+				})
+		</script>
+
+	</head>
+	<body style="background: #f4f8fc;">
+		<div class="body">
+			<!-- 页面头部 -->
+			<div class="header" style=" position:relative">
+				<div class="h-left"> <a class="sb-back" href="javascript:history.back(-1)" title="返回"></a> </div>
+				<div class="h-mid"> 订单详情 </div>
+            </div>
+
+            <!-- 地址部分 -->
+			<!-- 订单号信息 -->
+			<div class="order_scu">
+				<div class="ordernum">
+				</div>
+				<div class="clear"></div>
+
+				<a href="manAdd.html" class="det-adress">
+					<div class="producter">
+						<div class="producter_img">
+							<img src="images/orderdetails_icon_logistics@2x.png" alt="">
+						</div>
+						<div class="producter_con">
+							<div class="consignee">物流：百世快递（7700106395558）</div>
+							<div class="address">[金华市]金华江北小宋[154566556]已...<span><img src="images/btn_return_nor@2x.png" alt=""></span></div>
+							<p class="timeer">2019-09-01&nbsp;14:02:01</p>
+						</div>
+						<div class="clear"></div>
+						<div class="producterr_img">
+							<img src="images/orderdetails_icon_address@2x.png" alt="">
+						</div>
+						<div class="consignee">王小明&nbsp;13965697889</div>
+						<div class="addresser">收货地址收货地址收货地址收货地址收货地址收货地址收货地址收货地址</div>
+					</div>
+				</a>
+
+				<div class="add-item">
+					<div class="product-top">直到喝大</div>
+					<div class="product-box">
+						<div class="img"><img src="images/m_wine.png"></div>
+						<div class="txt">
+							<h6>百年大福6年·酱香型白500ML</h6>
+							<h6 style="padding-top: 0.2rem!important;">*6(整箱装)</h6>
+							<span class="product-price">¥&thinsp;<span class="price">680.00元</span></span>
+							<span class="product-num">×1</span>
+						</div>
+					</div>
+					<div class="clear"></div>
+					<div class="check-pro">
+						<a href=""><div class="pinjia">评价</div></a>
+						<a href=""><div class="Modify">申请售后</div></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="proice">
+				<div class="pro-price">
+					<span class="lt">商品金额</span>
+					<span class="rt">￥1180.00</span>
+				</div>
+				<div class="clear"></div>
+				<div class="preferential">
+					<span class="lt">优惠</span>
+					<span class="rt">￥20.00</span>
+				</div>
+				<div class="clear"></div>
+				<div class="freight">
+					<span class="lt">运费（快递）</span>
+					<span class="rt">￥5.00</span>
+				</div>
+				<div class="clear"></div>
+				<div class="tol_price">
+					<span class="lt">订单总价</span>
+					<span class="rt">￥1080.00</span>
+				</div>
+			</div>
+			<div class="clear"></div>
+
+			<div class="number">
+				<p>订单编号：12545654878</p>
+				<p>交易时间：2015-01-02   <span>10:20</span></p>
+			</div>
+
+			<ul class="fnav __web-inspector-hide-shortcut__" class="fnav">
+				<div class="del">删除订单</div>
+				<div class="f_en"><a href="">确认收货</a></div>
+			</ul>
+
+			
+	</body>
+
+</html>

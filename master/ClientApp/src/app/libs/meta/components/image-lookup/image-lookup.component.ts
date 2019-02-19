@@ -10,21 +10,26 @@ export class ImageLookupComponent {
   @Input() isMultity: boolean = true;
   @Input() mode: ModeEnum = ModeEnum.Query;
   ModeEnum = ModeEnum
-  @Input() keyExpr: string = "url";
+  @Input() keyExpr: string = "";
   async addImage() {
     let base64 = await this.fileService.selectImage();
     if (!this.value) this.value = [];
     let res: any = await this.uploadService.uploadImage(base64).toPromise();
     if (res.ok) {
-      var obj = {};
-      obj[this.keyExpr] = res.url;
-      this.value.push(obj);
+      if (this.keyExpr) {
+        var obj = {};
+        obj[this.keyExpr] = res.url;
+        if (this.isMultity) {
+          this.value.push(obj);
+        } else {
+          this.value = obj as any;
+        }
+      } else {
+        
+        this.value = res.url;
+      }
+      this.valueChange.emit(this.value);
     } else { }
-
-    this.valueChange.emit(this.value);
-
-
-
   }
 
   constructor(private uploadService: UploadService, private fileService: FileService) { }

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+		<title>填写物流</title>
+		<link rel="stylesheet" type="text/css" href="css/fil_logistics.css"/>
+		<script type="text/javascript" src="js/common.js.下载"></script>
+		<script type="text/javascript" src="js/jquery.js.下载"></script>
+		<script type="text/javascript" src="js/mobile.js.下载"></script>
+		<script src="js/shoppingcart.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.7.2.min.js"></script>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/formcheck2.js"></script>
+		<script src="js/shoppingcart.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			function choose_attrone(num){
+				$("#choose_attr1").animate({height:'52%'},[10000]);
+					var total=0,h=$(window).height(),
+					top =$('.good_canshu').height()||0,
+					con = $('.xiangq');
+					total = 0.8*h;
+					con.height(total-top+'px');
+				$(".f_mask1").show();
+			}
+			function close_choose_attr1(){	
+				$(".f_mask1").hide();
+				$('#choose_attr1').animate({height:'0'},[10000]);
+			}
+			
+		</script>
+		<style>
+			*{ box-sizing:border-box;}
+			body{ background:#f4f4f4;}
+			span{ font-size:12px;}
+			p{ margin:5px 0;}
+			.textWrap{ margin:10px 0 20px;}
+			.textWrap input,.textWrap textarea{ display:inline-block; background:#fff; border-radius:4px; border:1px solid #ddd; height:34px; width:100%; padding:7px 12px; padding-right:80px; line-height:20px; font-size:14px; color:#333;}
+			.textWrap textarea{ height:80px;}
+		</style>
+
+	</head>
+	<body style="background: #f4f8fc;">
+		<div class="body">
+			<!-- 页面头部 -->
+			<div class="header" style=" position:relative">
+				<div class="h-left"> <a class="sb-back" href="javascript:history.back(-1)" title="返回"></a> </div>
+				<div class="h-mid"> 填写物流 </div>
+            </div>
+
+            <!-- 地址部分 -->
+			<!-- 订单号信息 -->
+			<div class="order_scu">
+
+				<br>
+				<div style="width:90%;margin:0 auto;">
+					<p><span>物流公司*</span></p>
+					<div class="textWrap wordSumTotal">
+						<input type="text" name="" placeholder="请选择物流公司" onclick="choose_attrone(0)">
+					</div>
+					<p><span>物流单号*</span></p>
+					<div class="textWrap wordSumTotal">
+						<input type="text" name="" style="height:46px;" placeholder="请输入物流单号">
+					</div>
+					<p><span>联系电话*</span></p>
+					<div class="textWrap wordSumTotal">
+						<input type="text" name="" placeholder="请输入电话号码">
+					</div>
+					
+					<p><span>退货说明（可不填）</span></p>
+					<div class="textWrap wordSumTotal">
+						<textarea name="" cols="" rows="" placeholder="请输退货说明"></textarea>
+					</div>
+					<br>
+				</div>
+
+
+
+				
+			</div>
+			
+			<a href=" ">
+                <div class="btn"><span>提交货物物流申请</span></div>
+            </a>
+			
+			<section class="f_mask1" style="display: none;" onclick="close_choose_attr1();"></section>
+			<section class="f_block1" id="choose_attr1" style="height:0; overflow:hidden;">
+				<section class="good_canshu">  
+					<ul>	
+						<li class="confirm">选择物流公司</li>
+						<li class="m_add">
+							EMS
+							<div class="product-ckb"><em class="product-em "></em></div>
+						</li>
+						<div class="clear"></div>
+						<li class="m_add">
+							申通E物流
+							<div class="product-ckbr"><em class="product-em"></em></div>
+						</li>
+						<li class="m_add">
+							圆通速递
+							<div class="product-ckbt"><em class="product-em"></em></div>
+						</li>  
+						<li class="m_add">
+							中通速递
+							<div class="product-ckbq"><em class="product-em"></em></div>
+						</li>  
+						<li class="m_add">
+							百世汇通
+							<div class="product-ckbv"><em class="product-em"></em></div>
+						</li> 
+						<li class="m_add">
+							顺丰
+							<div class="product-ckbvr"><em class="product-em"></em></div>
+						</li> 
+						<li class="m_add">
+							韵达快递
+							<div class="product-ckbve"><em class="product-em"></em></div>
+						</li>  
+						
+					</ul>
+				</section>
+			</section>
+<script>
+		$('.m_add').click(function(){
+			//debugger;
+			$('.product-em').removeClass("product-xz")
+			$(this).find('.product-em').toggleClass("product-xz");
+		});
+</script>
+	</body>
+
+</html>

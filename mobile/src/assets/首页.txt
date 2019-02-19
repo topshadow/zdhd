@@ -1,0 +1,89 @@
+<div class="showcase-components-container"><!---->
+            
+        
+          <div class="cap-image-ad cap-image-ad--no-border-width">
+            <div class="cap-image-ad__swipe">
+                <h2 style="margin: 10px 0px 4px 14px;">商品内容</h2>
+                <div class="goods-list-wrapper"><div class="cap-goods-layout">
+                  <ul class="cap-goods-layout__container list card" style="padding-left: 15px; padding-right: 15px; margin-left: -5px; margin-right: -5px;">
+                    <li class="cap-goods-layout__wrapper">
+                      <a href="">
+                        <div class="cap-goods-list__wrapper fl"><div class="cap-goods__image-wrap" style="">
+                          <div data-lazy-log="0" data-lazy-log-id="439671005" data-lazy-log-params="{&quot;goods_id&quot;:439671005,&quot;banner_id&quot;:&quot;f.71901654~goods~1~VEh2th9g&quot;}" class="cap-goods__img cap-goods__img--cover" data-src="https://img.yzcdn.cn/upload_files/2018/10/19/FmWhmEfvQuy8sd440seKNTlaLIOl.jpg?imageView2%2F2%2Fw%2F520%2Fh%2F0%2Fq%2F75%2Fformat%2Fjpg" lazy="loaded" style="background-image: url(&quot;https://img.yzcdn.cn/upload_files/2018/10/19/FmWhmEfvQuy8sd440seKNTlaLIOl.jpg?imageView2%2F2%2Fw%2F520%2Fh%2F0%2Fq%2F75%2Fformat%2Fjpg&quot;);">
+                          </div>
+                          <div class="product_info">
+                            <h3 style="color:#000;">商品简介</h3>      
+                            <h3 style="color:#000;">原价：<span>10000</span></h3>
+                            <h3 style="color:#000;">活动价:5000</h3>
+                          </div>
+                        </div>
+                      </div>
+                        <!---->
+                      </a>
+                      
+                      <a href="">
+                        <div class="cap-goods-list__wrapper fl"><div class="cap-goods__image-wrap" style="">
+                          <div data-lazy-log="0" data-lazy-log-id="439671005" data-lazy-log-params="{&quot;goods_id&quot;:439671005,&quot;banner_id&quot;:&quot;f.71901654~goods~1~VEh2th9g&quot;}" class="cap-goods__img cap-goods__img--cover" data-src="https://img.yzcdn.cn/upload_files/2018/10/19/FmWhmEfvQuy8sd440seKNTlaLIOl.jpg?imageView2%2F2%2Fw%2F520%2Fh%2F0%2Fq%2F75%2Fformat%2Fjpg" lazy="loaded" style="background-image: url(&quot;https://img.yzcdn.cn/upload_files/2018/10/19/FmWhmEfvQuy8sd440seKNTlaLIOl.jpg?imageView2%2F2%2Fw%2F520%2Fh%2F0%2Fq%2F75%2Fformat%2Fjpg&quot;);">
+                          </div>
+                          <div class="product_info">
+                            <h3 style="color:#000;">商品简介</h3>      
+                            <h3 style="color:#000;">原价：<span>10000</span></h3>
+                            <h3 style="color:#000;">活动价:5000</h3>
+                          </div>
+                        </div>
+                      </div>
+                        <!---->
+                      </a>  
+                    </li>
+
+                    <li class="cap-goods-layout__wrapper">
+                      <a href="">
+                        <div class="cap-goods-list__wrapper fl"><div class="cap-goods__image-wrap" style="">
+                          <div data-lazy-log="0" data-lazy-log-id="439671005" data-lazy-log-params="{&quot;goods_id&quot;:439671005,&quot;banner_id&quot;:&quot;f.71901654~goods~1~VEh2th9g&quot;}" class="cap-goods__img cap-goods__img--cover" data-src="https://img.yzcdn.cn/upload_files/2018/10/19/FmWhmEfvQuy8sd440seKNTlaLIOl.jpg?imageView2%2F2%2Fw%2F520%2Fh%2F0%2Fq%2F75%2Fformat%2Fjpg" lazy="loaded" style="background-image: url(&quot;https://img.yzcdn.cn/upload_files/2018/10/19/FmWhmEfvQuy8sd440seKNTlaLIOl.jpg?imageView2%2F2%2Fw%2F520%2Fh%2F0%2Fq%2F75%2Fformat%2Fjpg&quot;);">
+                          </div>
+                          <div class="product_info">
+                            <h3 style="color:#000;">商品简介</h3>      
+                            <h3 style="color:#000;">原价：<span>10000</span></h3>
+                            <h3 style="color:#000;">活动价:5000</h3>
+                          </div>
+                        </div>
+                      </div>
+                        <!---->
+                      </a>
+                      
+                      <a href="">
+                        <div class="cap-goods-list__wrapper fl"><div class="cap-goods__image-wrap" style="">
+                          <div data-lazy-log="0" data-lazy-log-id="439671005" data-lazy-log-params="{&quot;goods_id&quot;:439671005,&quot;banner_id&quot;:&quot;f.71901654~goods~1~VEh2th9g&quot;}" class="cap-goods__img cap-goods__img--cover" data-src="https://img.yzcdn.cn/upload_files/2018/10/19/FmWhmEfvQuy8sd440seKNTlaLIOl.jpg?imageView2%2F2%2Fw%2F520%2Fh%2F0%2Fq%2F75%2Fformat%2Fjpg" lazy="loaded" style="background-image: url(&quot;https://img.yzcdn.cn/upload_files/2018/10/19/FmWhmEfvQuy8sd440seKNTlaLIOl.jpg?imageView2%2F2%2Fw%2F520%2Fh%2F0%2Fq%2F75%2Fformat%2Fjpg&quot;);">
+                          </div>
+                          <div class="product_info">
+                            <h3 style="color:#000;">商品简介</h3>      
+                            <h3 style="color:#000;">原价：<span>10000</span></h3>
+                            <h3 style="color:#000;">活动价:5000</h3>
+                          </div>
+                        </div>
+                      </div>
+                        <!---->
+                      </a>  
+                    </li>
+
+                  </ul>
+            </div>
+          </div>
+          
+          
+            <div class="cap-shop-nav safe-padding cap-shop-nav--1">
+              <div class="cap-wechat-nav">
+                <a href="" class="cap-wechat-nav__home">
+                  <i class="cap-wechat-nav__home-icon van-icon van-icon-wap-home"><!----></i>
+                </a>
+              <ul class="fnav" id="fnav"><li>
+                  <a href=" " class="f_home fnav_on">首页</a></li>
+                  <li><a href=" " class="f_car">购物车</a></li>
+                  <li><a href=" " class="f_user">我的</a></li>
+                </ul>
+              </div>
+            </div>
+
+        </div>
+          </div>
+        </div>

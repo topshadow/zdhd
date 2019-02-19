@@ -1,0 +1,50 @@
+<html style="font-size: 55.2px;">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>登录界面</title>
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/login.css">
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/formcheck2.js"></script>
+	</head>
+	<body>
+		<div class="bgImg"></div>
+		<header>
+			<img src="images/logon_01.png">
+		</header>
+		<div class="mainContent">	
+			<form name="form" action="" method="post" onsubmit="return checkForm()">
+				<div class="loginer">登录</div>
+				<input type="hidden" value="/myaccount.html" name="return_url">
+				<div class="loginInput">
+					<div class="item user">
+						<!-- <input type="text" placeholder="手机号" id="usernamer" name="username"> -->
+						<label for="mobliephone" class="cred">手机号</label>
+						<input type="text" name="Mobile" onfocus="focus_Mobile()" placeholder="13658264882" onblur="blur_Mobile()"/>
+						<span id="result_Mobile"></span>
+
+						<!-- <input type="text" placeholder="13658264882" id="usernumber" name="usernumber"> -->
+					</div>
+					<div class="item userword">
+						<label for="vercode" class="vercode">验证码</label>
+						<input type="userword" placeholder="输入验证码" name="userword" id="userword">
+						<span class="see">验证码</span>
+					</div>
+				</div>
+			</form>
+			<div class="loginBtn">
+				<div class="btn"><span>登录</span></div>
+			</div>
+		</div>
+		<div class="operation">
+			<span></span>
+			<h5>第三方账号登录</h5>
+			<span></span>			
+		</div>
+		<div class="wechart">
+			<a href=""><img src="images/wechart.png" alt=""></a>
+			
+		</div>
+
+	</body>
+</html>

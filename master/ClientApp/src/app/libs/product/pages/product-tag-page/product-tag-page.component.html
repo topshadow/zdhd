@@ -1,0 +1,16 @@
+<dx-data-grid id="productTags" [dataSource]="productTagDataSource" [showBorders]="true">
+  <dxo-editing mode="popup" [allowAdding]="true" [allowUpdating]="true" [allowDeleting]="true">
+    <dxo-popup title="编辑"
+               [showTitle]="true"
+               [width]="700"
+               [height]="600"
+               [position]="{ my: 'center', at: 'center', of: window }">
+    </dxo-popup>
+  </dxo-editing>
+  <dxo-remote-operations [filtering]="true" [sorting]="true" [grouping]="true"></dxo-remote-operations>
+  <dxi-column dataField="productTagId" [formItem]="{visible:false}" [caption]="'产品标签Id'"></dxi-column>
+  <dxi-column dataField="name" [caption]="'分类名称'"></dxi-column>
+  <dxi-column dataField="remark" [caption]="'备注'"></dxi-column>
+  <dxi-column dataField="createTime" [caption]="'创建时间'" [formItem]="{visible:false}"></dxi-column>
+
+</dx-data-grid>

@@ -20,9 +20,11 @@ export const navigation = [
         path: '/admin/product/product'
       },
       {
-        text: 'Display Data',
-        path: '/display-data'
-      }
+        text: '产品标签',
+        path: '/admin/product/product-tag'
+      },
+      {text:"广告管理",path:"/admin/product/banner"}
+
     ]
   },
   {

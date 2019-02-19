@@ -1,0 +1,55 @@
+<ons-page>
+    <div class="content">
+        <ons-carousel #carousel fullscreen swipeable auto-scroll overscrollable id="carousel" centered
+            (postchange)="postchange($event)" style="height:200px">
+
+            <ons-carousel-item style="background-color: #085078;" *ngFor="let banner of banners">
+                <img [src]="banner.imageUrl" alt="" style="max-width:100vw">
+            </ons-carousel-item>
+        </ons-carousel>
+        <div class="clear"></div>
+        <div class="tabCon latacti" style="display:block;">
+            <ng-container *ngIf="activeIndex==0">
+                <h3><span><img src="/assets/images/i_line.png" alt=""></span>最新活动</h3>
+                <div class="clear"></div>
+                <a>
+                    <div class="ct_img"><img src="/assets/images/home_btn_smallhammer@2x.png" alt="" (click)="go(1)">
+                    </div>
+                </a>
+                <a>
+                    <div class="ct_img"><img src="/assets/images/home_btn_mallet@2x.png" alt="" (click)="go(2)"></div>
+                </a>
+                <a>
+                    <div class="ct_img"><img src="/assets/images/home_btn_heavypunch@2x.png" alt="" (click)="go(3)">
+                    </div>
+                </a>
+                <a>
+                    <div class="ct_img"><img src="/assets/images/home_btn_godhammer@2x.png" alt="" (click)="go(4)">
+                    </div>
+                </a>
+            </ng-container>
+            <div class="clear"></div>
+
+            <ng-container *ngIf="selectedProductTag">
+                <h3><span><img src="/assets/images/i_line.png" alt=""></span>{{selectedProductTag.name}}</h3>
+                <div class="clear"></div>
+                <a *ngFor="let product of selectedProductTag.products" (click)="goProductDetailPage()">
+                    <div class="rec_img">
+                        <div class="rec_im">
+                            <img [src]="product.productImages[0]?.url" alt="">
+                        </div>
+                        <div class="txt">
+                            <h6>{{product.name}}</h6>
+                            <p style="padding-top: 0.2rem!important;">{{product.summary}}</p>
+                            <span class="product-price">活动价：&nbsp;<span
+                                    class="price">￥{{product.subProducts[0]?.price}}</span></span>
+                        </div>
+                    </div>
+                </a>
+
+            </ng-container>
+
+        </div>
+    </div>
+
+</ons-page>

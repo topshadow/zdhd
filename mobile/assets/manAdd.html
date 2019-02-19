@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=0">
+		<title>地址管理</title>
+		<link rel="stylesheet" type="text/css" href="css/manAdd.css"/>
+		<script type="text/javascript" src="js/common.js.下载"></script>
+		<script type="text/javascript" src="js/jquery.js.下载"></script>
+		<script type="text/javascript" src="js/mobile.js.下载"></script>
+		<script src="js/shoppingcart.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			$(function(){
+			
+
+				$(".del").click(function(){
+					if(confirm("您确定要删除当前地址？")){
+						$(this).closest(".add-item").remove();
+					}
+					
+					koncat();
+					TotalPrice();
+					shuliang();
+				});
+				
+
+			})
+		</script>
+
+
+	</head>
+	<body style="background: #f4f8fc;">
+		<div class="body">
+			<!-- 页面头部 -->
+			<div class="header" style=" position:relative">
+				<div class="h-left"> <a class="sb-back" href="javascript:history.back(-1)" title="返回"></a> </div>
+				<div class="h-mid"> 地址管理 </div>
+            </div>
+
+			
+            <!-- 地址部分 -->
+
+			<div class="add-item">
+				<div class="product-box">
+					<div class="product-ckb"><em class="product-em product-xz"></em></div>
+                    <div class="consignee">小明 <span>13450000168</span></div>
+					<div class="address">湖北省武汉市洪山区关山大道湖北省武汉市洪山区关山大道湖北省武汉市洪山区关山大道 </div>
+					<div class="de_add">默认地址</div>
+					<a href=""><div class="Modify">修改</div></a>
+					<div class="del">删除</div>
+				</div>
+			</div>
+
+			<div class="add-item">
+				<div class="product-box">
+					<div class="product-ckb"><em class="product-em"></em></div>
+                    <div class="consignee">小明 <span>13450000168</span></div>
+					<div class="address">湖北省武汉市洪山区关山大道湖北省武汉市洪山区关山大道湖北省武汉市洪山区关山大道 </div>
+					<div class="de_add">默认地址</div>
+					<a href=""><div class="Modify">修改</div></a>
+					<div class="del">删除</div>
+				</div>
+			</div>
+
+			<a href="new_add.html">
+				<div class="btn"><span>+ 新增地址</span></div>
+			</a>
+	</body>
+
+</html>

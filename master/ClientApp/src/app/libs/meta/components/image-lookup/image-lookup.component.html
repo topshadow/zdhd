@@ -1,8 +1,37 @@
-<ng-container *ngIf="mode==ModeEnum.Query">
-  <img [src]="image[keyExpr]" alt="Alternate Text" *ngFor="let image of value" style="max-width:50px" />
-</ng-container>
+{{isMutltity}} {{image}} 
+<ng-container *ngIf="mode==ModeEnum.Query"> 
+  <!-- 多张图片展示 -->
+  <ng-container *ngIf="isMultity"> 
+    <!-- 无表达式模式 -->
+    <ng-container *ngIf="!keyExpr">
+      <img [src]="image" style="max-width:50px" *ngFor="let image of value" />
+    </ng-container>
+    <!-- 有表达式模式 -->
+    <ng-container *ngIf="keyExpr">
+      <img [src]="image[keyExpr]" *ngFor="let image of value" style="max-width:50px" />
+    </ng-container>
+  </ng-container>
+  <!-- 单张图片展示 -->
+  <ng-container *ngIf="!isMultity">
+    <!-- 无表达式 -->
+    <img [src]="value" style="max-width:50px" *ngIf="!keyExpr" />
+    <!-- 有表达式 value-->
+     <img [src]="value[keyExpr]" style="max-width:50px" *ngIf="keyExpr"/>
+    </ng-container>
+  </ng-container>
 
-<ng-container *ngIf="mode==ModeEnum.Create||mode== ModeEnum.Edit">
-  <img [src]="image[keyExpr]" alt="Alternate Text" *ngFor="let image of value" style="max-width:50px"/>
-  <dx-button text="新增" icon="add" (click)="addImage()" ></dx-button>
-</ng-container>
+  <ng-container *ngIf="mode==ModeEnum.Create||mode== ModeEnum.Edit">
+    <!-- 多张图片 -->
+    <ng-container *ngIf="isMultity">
+      <img [src]="image[keyExpr]" alt="Alternate Text" *ngFor="let image of value" style="max-width:50px" />
+      <dx-button text="新增" icon="add" (click)="addImage()"></dx-button>
+    </ng-container>
+
+    <!-- 单张图片 -->
+    <ng-container *ngIf="!isMultity">
+      <img *ngIf="keyExpr&&value" [src]="value[keyExpr]" style="max-width:50px" />
+      <img *ngIf="!keyExpr&&value" [src]="value" style="max-width:50px" />
+      <dx-button text="新增" icon="add" (click)="addImage()"></dx-button>
+    </ng-container>
+  </ng-container>
+

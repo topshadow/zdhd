@@ -1,0 +1,209 @@
+body,html{margin:0;padding:0;height:100%}
+body{min-width:320px;margin:0;padding:0;font-family:"microsoft yahei",Verdana,Arial,Helvetica,sans-serif;font-size:1em}
+a{text-decoration:none}
+img{max-width:100%;vertical-align:middle}
+@media screen and (min-width:768px){
+    img{max-width:64%;vertical-align:middle;}
+}
+
+
+*{margin:0;padding:0}
+div{margin:0;padding:0}
+li,ul{list-style:none}
+em{font-style:normal}
+.body{width:100%;max-width:640px;margin:0 auto;padding-bottom:3.2rem;box-sizing:border-box;
+}
+.shop{width:100%;height:2.3rem;border-bottom:1px solid #dcdcdc;line-height:2.3rem;padding-left:2rem;box-sizing:border-box}
+.shop i{display:inline-block;width:1.3rem;height:1.2rem;vertical-align:sub;margin-right:5px}
+.product{width:100%;padding-bottom:3.05rem;padding-top: 1rem;}
+.sb-back{
+    background: url(../images/top.png) no-repeat;
+    background-size: auto 230px;
+}
+
+/* 页面头部  */
+.header { width:100%; height:45px; background:#ffffff;top:0; z-index:9999; border:0; border-bottom:1px solid #CCC}
+.h-left{float:left;width:30px; height:45px;}
+.h-left a{ display:block; width:30px; height:45px; background-position:5px 9px; }
+
+.h-right{float:right; width:30px;height:45px; line-height:45px; margin-right:10px;}
+.top_bar{float:right; display:block; width:30px; height:45px;}
+#show_more{width:30px; height:45px;background-position:5px -28px;}
+
+.h-mid { height:45px; float:left; text-align:left; color:#666; font-size:18px; line-height:45px; position:relative;font-family: "宋体", "宋体", Arial, Helvetica, sans-serif;}
+.h-mid h6 { color:#333; font-size:16px; font-family: "宋体", "宋体", Arial, Helvetica, sans-serif; font-weight:normal;}
+
+
+.product-ckb em{width:1.1rem;height:1.1rem;border-radius:50%;border:1px solid #B8B4B4;display:inline-block;cursor:pointer;vertical-align: middle;}
+.product-ckb .product-xz{border:0;display:inline-block;    background: url(../images/gouico.png) no-repeat 0 0;
+    background-size: 1.1rem;vertical-align: middle;}
+
+.product-ckb span{
+    display: inline-block;
+    margin-left: 5px;
+}   
+
+/* 订单号信息 */
+.ordernum{
+    width: 90%;
+    overflow: hidden;
+    margin: 0 auto;
+    background: url(../images/suc_del.png) no-repeat;
+    background-size: 100% 100%;
+    height: 4.0rem;line-height: 4.0rem;
+}
+@media screen and (min-width:768px){
+    .ordernum{
+        width: 90%;
+        overflow: hidden;
+        margin: 0 auto;
+        background: url(../images/suc_del.png) no-repeat;
+        background-size: 100% 100%;
+        height: 7.0rem;line-height: 4.0rem;
+    }
+}
+
+
+
+.clear{
+    clear: both;
+}
+.producter_img{
+    float: left;
+    width: 10%;
+    position: absolute;
+    top: 1.8em;left: 0.6em;
+}
+
+.producter{    float: left;
+    height:3.8rem;
+    position: relative;
+    padding: .6rem 0;
+    width: 90%;
+    box-sizing: border-box;
+    margin: 0.2rem 5%;
+}
+
+.consignee{
+    float: left;
+    height: 1.8rem;
+    padding-left: 3.0rem;
+    padding-top: 0.5rem;
+    color: #090909;
+    font-size: 15px;
+    display: inline-block;
+    width: 100%;
+    box-sizing: border-box;
+}
+@media screen and (max-width:320px){
+    .consignee{
+        float: left;
+        height: 1.8rem;
+        padding-left: 2.8rem;
+        padding-top: 0.5rem;
+        color: #090909;
+        font-size: 14px;
+        display: inline-block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+.Modify {
+    width: 40%;
+    height: 2rem;
+    position: absolute;
+    left: 1rem;
+    border: 1px solid #421a8e;
+    color: #421a8e;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 5px;
+}
+
+.order_det {
+    width: 40%;
+    height: 2rem;
+    position: absolute;
+    right: 1rem;
+    border: 1px solid #bebebe;
+    color: #090909;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+
+.smaham h4 span{
+    display: inline-block;
+    width: 30%;margin-left: 1em;margin-right: 1em;
+  }
+  @media screen and (max-width:320px){
+    .smaham h4 span {
+      display: inline-block;
+      width: 25%;
+      margin-left: 1em;
+      margin-right: 1em;
+  }
+  }
+  .smaham h4 span img{
+    vertical-align: middle; width: 100%;
+  }
+  .smaham h4 {
+    overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 1.0em;
+      letter-spacing: 0.1em;
+      font-weight: normal;
+      width: 90%;
+      margin: 1em auto;
+  }
+
+
+
+  .rec_img{
+    float: left;
+    width: 50.0%;
+    height: 216px;
+    
+  }
+  .rec_im{
+    text-align: center;
+  }
+  .rec_img img{
+    width: 70%;
+  }
+  .rec_img .txt {
+   margin-left: 1.0em;
+  }
+  .rec_img .txt h6 {
+    overflow: hidden;
+      text-overflow: ellipsis;
+      color: #090909;
+      font-size: 1.0em;
+      white-space: nowrap;
+      font-weight: normal;
+      margin: 0;
+      letter-spacing: 0.1em;
+  }
+  .rec_img .txt p{
+    display: inline-block;
+    color: #9d9d9d;
+    text-align: left;
+  }
+  .product-price{
+    overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 0.8em;
+      white-space: nowrap;
+      font-weight: normal;
+      margin: 0;
+      letter-spacing: 0.1em;
+      display: block;
+      color: #090909;
+  }
+  .product-price span {
+    color: #421a8e;
+  }

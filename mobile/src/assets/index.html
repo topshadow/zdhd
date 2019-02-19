@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="referrer" content="always">
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">   
+    <title>微尚商城</title>
+      <link rel="stylesheet" onerror="_cdnFallback(this)" href="css/mian.css" media="screen">
+
+    	<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+	    <link rel="stylesheet" href="css/swiper.min.css">
+      <script src="js/jquery-1.9.1.min.js"></script>
+      <script type="text/javascript" src="js/jquery.js"></script>
+      <script src="js/swiper-3.3.1.jquery.min.js"></script>
+      <script type="text/javascript" src="js/swiper.min.js"></script>
+  
+      <style type="text/css">
+        .page-preview .content { 
+          max-width: 982px;
+          padding-left: 15px;
+          padding-right: 15px;
+          border-left: 1px solid #ddd;
+          border-right: 1px solid #ddd;
+          background-color: #f4f8fc;
+          margin: 0 auto;
+        }
+      </style>
+      <link rel="stylesheet" onerror="_cdnFallback(this)" href="css/style.css" media="screen">
+      <link rel="stylesheet" onerror="_cdnFallback(this)" href="css/model.css" media="screen">
+      <link rel="stylesheet" onerror="_cdnFallback(this)" href="css/index.css" media="screen">
+      <script>
+
+          setInterval(()=>{
+          let activeIndex= $('.swiper-pagination-bullet').toArray().indexOf(pDom=$('.swiper-pagination-bullet-active').get(0));
+            $('.tabCon').hide();
+            $($('.tabCon').get(activeIndex)).show();
+
+          },200)
+
+      </script>
+</head>
+  <body class="default-theme body-fixed-bottom has-floating-nav has-floating-nav--1" style="overflow-x: hidden;">
+  
+    <div class="content">
+      <!--轮播部分-->
+          <div class="swiper-container">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide tabLi"><img src="images/banner1.gif" width="99%;height:93%;min-height:120px;"></div>
+                  <div class="swiper-slide tabLi"><img src="images/banner2.gif" width="99%;height:93%;min-height:120px;"></div>
+                  <div class="swiper-slide tabLi"><img src="images/banner3.gif" width="99%;height:93%;min-height:120px;"></div>
+                  <div class="swiper-slide tabLi"><img src="images/banner4.gif" width="99%;height:93%;min-height:120px;"></div>
+                  <div class="swiper-slide tabLi"><img src="images/banner5.gif" width="99%;height:93%;min-height:120px;"></div>
+                  <div class="swiper-slide tabLi"><img src="images/banner6.gif" width="99%;height:93%;min-height:120px;"></div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!--<div class="swiper-pagination"></div>-->
+          </div>
+          <script>
+            $(function(){
+              //Main Swiper
+              var mySwiper = new Swiper('.swiper-container',{
+              autoplay:5000,
+              visibilityFullFit : true,
+              loop:true,
+              pagination : '.swiper-pagination',
+              autoplayDisableOnInteraction : false,
+              });
+            })
+          </script>
+
+
+          <!-- 对应轮播对应的栏目内容 -->
+          <div class="clear"></div>
+          <div class="tabCon latacti"  style="display:block;">
+              <h3><span><img src="images/i_line.png" alt=""></span>最新活动</h3>
+              <div class="clear"></div>
+              <a href="">
+                <div class="ct_img"><img src="images/home_btn_smallhammer@2x.png" alt=""></div>
+              </a>
+              <a href="">
+                <div class="ct_img"><img src="images/home_btn_mallet@2x.png" alt=""></div>
+              </a>
+              <a href=""><div class="ct_img"><img src="images/home_btn_heavypunch@2x.png" alt=""></div></a>
+              <a href=""><div class="ct_img"><img src="images/home_btn_godhammer@2x.png" alt=""></div></a>
+              <div class="clear"></div>
+              <h3><span><img src="images/i_line.png" alt=""></span>超值推荐</h3>
+              <div class="clear"></div>
+              <a href="">
+                <div class="rec_img">
+                  <div class="rec_im">
+                      <img src="images/g_wine.png" alt="">
+                  </div>
+                  <div class="txt">
+                    <h6>大福美久河光瓶...</h6>
+                    <p style="padding-top: 0.2rem!important;">500ML*6(整箱装)</p>
+                    <span class="product-price">活动价：&nbsp;<span class="price">￥240.00</span></span>
+                  </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="rec_img">
+                  <div class="rec_im">
+                      <img src="images/t_wine.png" alt="">
+                  </div>
+                  <div class="txt">
+                    <h6>桶装美久河散酒...</h6>
+                    <p style="padding-top: 0.2rem!important;">5L/桶</p>
+                    <span class="product-price">活动价：&nbsp;<span class="price">￥200.00</span></span>
+                  </div>
+                </div>
+              </a>
+          </div>
+
+          <div class="tabCon smaham">
+              <h4><span><img src="images/l_line.png" alt=""></span>小锤磨人<span><img src="images/r_line.png" alt=""></span></h4>
+              <a href="">
+                <div class="rec_img">
+                  <div class="rec_im">
+                      <img src="images/g_wine.png" alt="">
+                  </div>
+                  <div class="txt">
+                    <h6>大福美久河光瓶...</h6>
+                    <p style="padding-top: 0.2rem!important;">500ML*6(整箱装)</p>
+                    <span class="product-price">活动价：&nbsp;<span class="price">￥240.00</span></span>
+                  </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="rec_img">
+                  <div class="rec_im">
+                      <img src="images/t_wine.png" alt="">
+                  </div>
+                  <div class="txt">
+                    <h6>桶装美久河散酒...</h6>
+                    <p style="padding-top: 0.2rem!important;">5L/桶</p>
+                    <span class="product-price">活动价：&nbsp;<span class="price">￥200.00</span></span>
+                  </div>
+                </div>
+              </a>
+          </div>
+
+          <div class="tabCon bigham">
+              <h4><span><img src="images/l_line.png" alt=""></span>大锤暴击<span><img src="images/r_line.png" alt=""></span></h4>
+
+              <a href="">
+                <div class="rec_img">
+                  <div class="rec_im">
+                      <img src="images/g_wine.png" alt="">
+                  </div>
+                  <div class="txt">
+                    <h6>大福美久河光瓶...</h6>
+                    <p style="padding-top: 0.2rem!important;">500ML*6(整箱装)</p>
+                    <span class="product-price">活动价：&nbsp;<span class="price">￥240.00</span></span>
+                  </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="rec_img">
+                  <div class="rec_im">
+                      <img src="images/t_wine.png" alt="">
+                  </div>
+                  <div class="txt">
+                    <h6>桶装美久河散酒...</h6>
+                    <p style="padding-top: 0.2rem!important;">5L/桶</p>
+                    <span class="product-price">活动价：&nbsp;<span class="price">￥200.00</span></span>
+                  </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="rec_img">
+                  <div class="rec_im">
+                      <img src="images/g_wine.png" alt="">
+                  </div>
+                  <div class="txt">
+                    <h6>大福美久河光瓶...</h6>
+                    <p style="padding-top: 0.2rem!important;">500ML*6(整箱装)</p>
+                    <span class="product-price">活动价：&nbsp;<span class="price">￥240.00</span></span>
+                  </div>
+                </div>
+              </a>
+              <a href="">
+                <div class="rec_img">
+                  <div class="rec_im">
+                      <img src="images/t_wine.png" alt="">
+                  </div>
+                  <div class="txt">
+                    <h6>桶装美久河散酒...</h6>
+                    <p style="padding-top: 0.2rem!important;">5L/桶</p>
+                    <span class="product-price">活动价：&nbsp;<span class="price">￥200.00</span></span>
+                  </div>
+                </div>
+              </a>
+          </div>
+
+          <div class="tabCon heaham">
+              <h4><span><img src="images/l_line.png" alt=""></span>重锤无情<span><img src="images/r_line.png" alt=""></span></h4>
+              <a href="">
+                  <div class="fu_img">
+                    <div class="rec_imgr">
+                        <img src="images/fu_wine.png" alt="">
+                    </div>
+                    <div class="txtr">
+                      <h6>桶装美久河散酒...</h6>
+                      <p style="padding-top: 0.2rem!important;">5L/桶</p>
+                      <span class="product-price">活动价：&nbsp;<span class="price">￥200.00</span></span>
+                    </div>
+                  </div>
+              </a>
+
+              <a href="">
+                <div class="rec_img">
+                  <div class="rec_im">
+                      <img src="images/g_wine.png" alt="">
+                  </div>
+                  <div class="txt">
+                    <h6>大福美久河光瓶...</h6>
+                    <p style="padding-top: 0.2rem!important;">500ML*6(整箱装)</p>
+                    <span class="product-price">活动价：&nbsp;<span class="price">￥240.00</span></span>
+                  </div>
+                </div>
+              </a>
+               <a href="">
+                  <div class="rec_img">
+                    <div class="rec_im">
+                        <img src="images/t_wine.png" alt="">
+                    </div>
+                    <div class="txt">
+                      <h6>桶装美久河散酒...</h6>
+                      <p style="padding-top: 0.2rem!important;">5L/桶</p>
+                      <span class="product-price">活动价：&nbsp;<span class="price">￥200.00</span></span>
+                    </div>
+                  </div>
+              </a>
+          </div>
+
+          <div class="tabCon godham">
+              <h4><span><img src="images/l_line.png" alt=""></span>神锤转世<span><img src="images/r_line.png" alt=""></span></h4>
+              <a href="">
+                  <div class="fu_img">
+                    <div class="rec_imgr">
+                        <img src="images/fu_wine.png" alt="">
+                    </div>
+                    <div class="txtr">
+                      <h6>桶装美久河散酒...</h6>
+                      <p style="padding-top: 0.2rem!important;">5L/桶</p>
+                      <span class="product-price">活动价：&nbsp;<span class="price">￥200.00</span></span>
+                    </div>
+                  </div>
+              </a>
+
+              <a href="">
+                <div class="rec_img">
+                  <div class="rec_im">
+                      <img src="images/g_wine.png" alt="">
+                  </div>
+                  <div class="txt">
+                    <h6>大福美久河光瓶...</h6>
+                    <p style="padding-top: 0.2rem!important;">500ML*6(整箱装)</p>
+                    <span class="product-price">活动价：&nbsp;<span class="price">￥240.00</span></span>
+                  </div>
+                </div>
+              </a>
+               <a href="">
+                  <div class="rec_img">
+                    <div class="rec_im">
+                        <img src="images/t_wine.png" alt="">
+                    </div>
+                    <div class="txt">
+                      <h6>桶装美久河散酒...</h6>
+                      <p style="padding-top: 0.2rem!important;">5L/桶</p>
+                      <span class="product-price">活动价：&nbsp;<span class="price">￥200.00</span></span>
+                    </div>
+                  </div>
+              </a>
+
+              <a href="">
+                  <div class="rec_img">
+                    <div class="rec_im">
+                        <img src="images/g_wine.png" alt="">
+                    </div>
+                    <div class="txt">
+                      <h6>大福美久河光瓶...</h6>
+                      <p style="padding-top: 0.2rem!important;">500ML*6(整箱装)</p>
+                      <span class="product-price">活动价：&nbsp;<span class="price">￥240.00</span></span>
+                    </div>
+                  </div>
+              </a>
+              <a href="">
+                    <div class="rec_img">
+                      <div class="rec_im">
+                          <img src="images/t_wine.png" alt="">
+                      </div>
+                      <div class="txt">
+                        <h6>桶装美久河散酒...</h6>
+                        <p style="padding-top: 0.2rem!important;">5L/桶</p>
+                        <span class="product-price">活动价：&nbsp;<span class="price">￥200.00</span></span>
+                      </div>
+                    </div>
+              </a>
+
+              <a href="">
+                  <div class="rec_img">
+                    <div class="rec_im">
+                        <img src="images/g_wine.png" alt="">
+                    </div>
+                    <div class="txt">
+                      <h6>大福美久河光瓶...</h6>
+                      <p style="padding-top: 0.2rem!important;">500ML*6(整箱装)</p>
+                      <span class="product-price">活动价：&nbsp;<span class="price">￥240.00</span></span>
+                    </div>
+                  </div>
+              </a>
+              <a href="">
+                    <div class="rec_img">
+                      <div class="rec_im">
+                          <img src="images/t_wine.png" alt="">
+                      </div>
+                      <div class="txt">
+                        <h6>桶装美久河散酒...</h6>
+                        <p style="padding-top: 0.2rem!important;">5L/桶</p>
+                        <span class="product-price">活动价：&nbsp;<span class="price">￥200.00</span></span>
+                      </div>
+                    </div>
+              </a>
+
+          </div>
+
+          <div class="tabCon libgods">
+              <h4><span><img src="images/l_line.png" alt=""></span>商品库<span><img src="images/r_line.png" alt=""></span></h4>
+               <a href="">
+                <div class="rec_img">
+                  <div class="rec_im">
+                      <img src="images/g_wine.png" alt="">
+                  </div>
+                  <div class="txt">
+                    <h6>大福美久河光瓶...</h6>
+                    <p style="padding-top: 0.2rem!important;">500ML*6(整箱装)</p>
+                    <span class="product-price">活动价：&nbsp;<span class="price">￥240.00</span></span>
+                  </div>
+                </div>
+              </a>
+               <a href="">
+                  <div class="rec_img">
+                    <div class="rec_im">
+                        <img src="images/t_wine.png" alt="">
+                    </div>
+                    <div class="txt">
+                      <h6>桶装美久河散酒...</h6>
+                      <p style="padding-top: 0.2rem!important;">5L/桶</p>
+                      <span class="product-price">活动价：&nbsp;<span class="price">￥200.00</span></span>
+                    </div>
+                  </div>
+              </a>
+              <a href="">
+                <div class="rec_img">
+                  <div class="rec_im">
+                      <img src="images/g_wine.png" alt="">
+                  </div>
+                  <div class="txt">
+                    <h6>大福美久河光瓶...</h6>
+                    <p style="padding-top: 0.2rem!important;">500ML*6(整箱装)</p>
+                    <span class="product-price">活动价：&nbsp;<span class="price">￥240.00</span></span>
+                  </div>
+                </div>
+              </a>
+               <a href="">
+                  <div class="rec_img">
+                    <div class="rec_im">
+                        <img src="images/t_wine.png" alt="">
+                    </div>
+                    <div class="txt">
+                      <h6>桶装美久河散酒...</h6>
+                      <p style="padding-top: 0.2rem!important;">5L/桶</p>
+                      <span class="product-price">活动价：&nbsp;<span class="price">￥200.00</span></span>
+                    </div>
+                  </div>
+              </a>
+              <a href="">
+                <div class="rec_img">
+                  <div class="rec_im">
+                      <img src="images/g_wine.png" alt="">
+                  </div>
+                  <div class="txt">
+                    <h6>大福美久河光瓶...</h6>
+                    <p style="padding-top: 0.2rem!important;">500ML*6(整箱装)</p>
+                    <span class="product-price">活动价：&nbsp;<span class="price">￥240.00</span></span>
+                  </div>
+                </div>
+              </a>
+               <a href="">
+                  <div class="rec_img">
+                    <div class="rec_im">
+                        <img src="images/t_wine.png" alt="">
+                    </div>
+                    <div class="txt">
+                      <h6>桶装美久河散酒...</h6>
+                      <p style="padding-top: 0.2rem!important;">5L/桶</p>
+                      <span class="product-price">活动价：&nbsp;<span class="price">￥200.00</span></span>
+                    </div>
+                  </div>
+              </a>
+          </div>
+
+    </div>
+
+
+      <div class="cap-wechat-nav">
+        <ul class="fnav" id="fnav"><li>
+          <a href="index.html" class="f_home fnav_on">首页</a></li>
+          <li><a href=" " class="f_car">购物车</a></li>
+          <li><a href=" " class="f_user">我的</a></li>
+        </ul>
+      </div>
+
+
+  </body>
+</html>
